@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mushroom and lentil meatballs</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Mushroom and lentil meatballs</h1>
+        <p>One of my tasty <a href="http://danielfilan.com/recipes.html">recipes</a>.</p>
+
+      </header>
+      <section>
+<h3>
+<a id="about-this-recipe" class="anchor" href="#about-this-recipe" aria-hidden="true"><span class="octicon octicon-link"></span></a>About this recipe</h3>
+
+<p>This recipe makes 15 vegetarian 'meat'-balls, likely to be served with pasta. I got it from Miranda Rivera's recipe on <a href="http://plantbasedonabudget.com/recipe/homemade-meatless-meatballs/">Plant Based on a Budget</a>.</p>
+
+<h3>
+<a id="ingredients" class="anchor" href="#ingredients" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ingredients</h3>
+
+<ul>
+ <li>1 cup brown lentils (rinsed)</li>
+ <li>250 g mushrooms (sliced)</li>
+ <li>1/2 cup rolled oats</li>
+ <li>1 teaspoon dried oregano</li>
+ <li>1/2 teaspoon red pepper flakes</li>
+ <li>1/2 teaspoon dried thyme</li>
+ <li>1/2 teaspoon dried tarragon</li>
+ <li>2 tablespoons olive oil</li>
+ <li>1 white onion (chopped)</li>
+ <li>4 garlic cloves (minced)</li>
+ <li>1 tablespoon soy sauce</li>
+</ul>
+
+<h3>
+<a id="method" class="anchor" href="#method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Method</h3>
+
+<ol>
+ <li>Preheat oven to 200&#x2103;, and line a baking tray with paper. Combine lentils and 2 cups of water in a medium saucepan. Bring to a boil, then reduce heat to low and simmer for 10 minutes. Remove from heat, drain, and let cool.</li>
+ <li>Heat the oil in a saucepan over a medium-high heat. Add the celery and onion and stir for 3-5 minutes until the onion is soft, but not brown.</li>
+ <li>Stir in the flour and reduce the heat to low. Stir the flour for a minute or two to remove the raw flavour.</li>
+ <li>Add the stock and peanut butter, and stir together. Increase the heat to high and bring the soup to the boil. Reduce the heat, partially cover the pan and leave to simmer for 10 minutes.</li>
+ <li>Season to taste with cayenne, salt, and pepper.</li>
+</ol>
+
+
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
