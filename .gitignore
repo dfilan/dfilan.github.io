@@ -1,2 +1,4 @@
 # get rid of auto-generated emacs files
 *~
+
+.DS_Store
