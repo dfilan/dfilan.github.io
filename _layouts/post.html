@@ -2,15 +2,7 @@
 layout: default
 ---
 <div class="wrapper">
-  <header>
-    <h1>Daniel Filan</h1>
-    <img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11659278_10202944584654914_2762452412152680044_n.jpg?oh=f017f593bd04d84d5de68bb00a736ddf&oe=58486651"/>
-    <ul>
-      <li><a href="https://www.fhi.ox.ac.uk/wp-content/uploads/cv.pdf">CV</a></li>
-      <li><a href="mailto:df@danielfilan.com">email</a></li>
-      <li><a href="mailto:df@danielfilan.com">github</a></li>
-    </ul>
-  </header>
+  {% include sidebar.html %}
   <section>
     <h2>{{ page.title }}</h2>
     {{ content }}

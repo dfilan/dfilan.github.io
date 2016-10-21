@@ -1,3 +1,7 @@
+---
+layout: none
+date:   ""
+---
 <!doctype html>
 <html>
   <head>
@@ -14,17 +18,8 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <h1>Daniel Filan</h1>
-        <img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11659278_10202944584654914_2762452412152680044_n.jpg?oh=f017f593bd04d84d5de68bb00a736ddf&oe=58486651"/>
-        <ul>
-          <li><a href="/pdfs/cv.pdf">CV</a></li>
-          <li><a href="mailto:df@danielfilan.com">email</a></li>
-	  <li><a href="/daniel_filan_public_key.asc">PGP public key</li>
-          <li><a href="https://github.com/dfilan">github</a></li>
-        </ul>
-      </header>
-      <section>
+    {% include sidebar.html %}
+<section>
 
 <h2>
 <a id="about-me" class="anchor" href="#about-me" aria-hidden="true"><span class="octicon octicon-link"></span></a>About me</h2>
@@ -59,6 +54,6 @@ My honours thesis about speed priors, used both in sequence prediction and in an
 
     </div>
     <script src="javascripts/scale.fix.js"></script>
-
+</section>
   </body>
 </html>
