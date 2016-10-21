@@ -4,7 +4,7 @@ title:  "Bets"
 date:   ""
 ---
 
-A catalogue of public bets that I've made with individual people about stuff (not including bets made on prediction markets). This is intended to be exhaustive but is probably not: please email me with omissions or inaccuracies.
+A catalogue of public bets that I've made with individual people about stuff (not including bets made on prediction markets).
 
 * On the 20th of October 2016, I bet $25 of my money against $5 of Max Kemeny's that [this map](http://www.270towin.com/maps/3n2dY), showing Clinton winning all swing states including AZ but not GA or UT and Trump winning the rest, would not be the outcome of the 2016 US presidential election. Winner: unknown.
 * On the 8th of August 2016, I [bet](http://econlog.econlib.org/archives/2016/08/johnson_bet.html) $100 of my money against $100 of Bryan Caplan's that Gary Johnson would receive greater than 5% of the popular vote in the 2016 US presidential election. Winner: unknown.
