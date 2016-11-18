@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Generalized multi-quickselect</title>
+  <meta name="description" content="I’ve been thinking a lot recently about how you find the th smallest element in the disjoint union of several data structures.">
+
+
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+  <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="canonical" href="http://danielfilan.com//2016/06/16/generalized-multi-quickselect.html">
+  <link rel="alternate" type="application/rss+xml" title="Daniel Filan" href="http://danielfilan.com//feed.xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$$', '$$'] ],
+        displayMath: [ ['$^$', '$^$']],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      messageStyle: "none",
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+    });
+  </script>
+  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+
+  <body>
+
+    
+
+    <div class="wrapper">
+  <header>
+  <h1><a href="/">Daniel Filan</a></h1>
+  <img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11659278_10202944584654914_2762452412152680044_n.jpg?oh=f017f593bd04d84d5de68bb00a736ddf&oe=58486651"/>
+  <ul>
+    <li><a href="/pdfs/cv.pdf">CV</a></li>
+    <li><a href="mailto:df@danielfilan.com">email</a></li>
+    <li><a href="/daniel_filan_public_key.asc">PGP public key</li>
+    <li><a href="https://github.com/dfilan">github</a></li>
+    <li><a href="/posts">blog</a></li>
+  </ul>
+</header>
+
+
+  <section>
+    <h2>Generalized multi-quickselect</h2>
+    <p>I’ve been thinking a lot recently about how you find the <script type="math/tex">k</script>th smallest element in the disjoint union of several data structures.</p>
+
+<h2 id="multi-quickselect-on-data-structures-with-fast-rank">Multi-quickselect on data structures with fast <code class="highlighter-rouge">rank</code></h2>
+
+<p>Yesterday I <a href="/2016/06/15/multi-sorted-array-quickselect">came up with an algorithm similar to quickselect</a> for the version of this problem where you have multiple sorted arrays.</p>
+
+<p>But this algorithm also works on any other data structure which supports the <code class="highlighter-rouge">rank</code> method in <script type="math/tex">O(\log(n))</script> time.</p>
+
+<p>On a collection of data structures with a total of <script type="math/tex">O(t)</script> elements, the modified quickselect algorithm involves <script type="math/tex">O(log(t))</script> iterations. In each iteration, the rank of a random element is computed in every data structure.</p>
+
+<p>So the total time taken is (time to calculate rank in every data structure) * (log of total number of elements).</p>
+
+<table class="table" id="table1">
+  <tr>
+    <th>Collection</th>
+    <th>Time complexity</th>
+  </tr>
+  <tr>
+    <td>$$ m$$ sorted arrays of average length $$ n$$</td>
+    <td>$$ \log(m \cdot n) \cdot m \cdot \log(n)$$</td>
+  </tr>
+    <tr>
+    <td>$$ m$$ sorted arrays of total length $$ t$$</td>
+    <td>$$ \log(t) \cdot m \cdot \log(\frac tm)$$</td>
+  </tr>
+  <tr>
+    <td>Two sorted arrays, of lengths $$ a$$ and $$ b$$</td>
+    <td>$$ \log(a + b)^2$$</td>
+  </tr>
+  <tr>
+    <td>$$ m$$ order statistic trees of average size $$ n$$</td>
+    <td>$$ \log(m \cdot n) \cdot m \cdot \log(n)$$</td>
+  </tr>
+  <tr>
+    <td>$$ \log(n)$$ sorted arrays of sizes $$ [1, 2, 4, ...n]$$</td>
+    <td>$$ \log(n)^3$$ </td>
+  </tr>
+</table>
+
+<p>(See <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> for more details on the exponentially shrinking arrays.)</p>
+
+<p>For data structures with <script type="math/tex">O(log(n))</script> <code class="highlighter-rouge">rank</code>, I think this is optimal.</p>
+
+<h2 id="allowing-data-structures-without-fast-rank">Allowing data structures without fast <code class="highlighter-rouge">rank</code></h2>
+
+<p>How about if some of your data structures are unsorted?</p>
+
+<p>This algorithm needs to be modified, because there’s no particular guarantee that any data structure gets smaller on a particular iteration. This is okay in cases where <code class="highlighter-rouge">rank</code> is cheap enough that the asymptotic complexity isn’t affected by having a data structure which stays at its original size for most of the runtime of the algorithm. But on an unsorted array, <code class="highlighter-rouge">rank</code> takes <script type="math/tex">O(n)</script> and a key part of the argument for the good runtime of quickselect is that the unordered array usually gets smaller every time you call <code class="highlighter-rouge">rank</code>.</p>
+
+<p>This issue is why my attempt at an <a href="/2016/06/12/quickselect-lemma.html">optimal algorithm for selection on an OST and an unsorted array</a> was so complex.</p>
+
+<p>Obviously there’s not going to be a sublinear time solution to this problem. So we might as well take linear time to add all our unsorted structures together into an unsorted array, in linear time. So we only need to consider the problem where we have a single unsorted array.</p>
+
+<h3 id="non-optimal-solution">Non-optimal solution</h3>
+
+<p>When I have a collection of data structures such that <code class="highlighter-rouge">rank</code> takes time <script type="math/tex">O(r)</script> and <code class="highlighter-rouge">select</code> takes time <script type="math/tex">O(s)</script>, I can run <a href="/2016/06/12/quickselect-lemma.html">my <code class="highlighter-rouge">double_quickselect_v2</code> algorithm</a> on an unordered array of length <script type="math/tex">n</script> and that collection, with query time <script type="math/tex">O(\log(n) \cdot r + s)</script>. For example, this algorithm can deal with a sorted array of size <script type="math/tex">m</script> and an unsorted array of size <script type="math/tex">n</script> in overall <script type="math/tex">O(\log(n) \cdot \log(m) + \log(m)) = O(\log(m)\cdot\log(n))</script>.</p>
+
+<h3 id="what-an-optimal-solution-might-look-like">What an optimal solution might look like</h3>
+
+<p>I bet we can generalize my alleged <a href="/2016/06/12/quickselect-lemma.html">optimal algorithm for selection on an OST and an unsorted array</a>.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>I have a bunch of data structures and want to find the <script type="math/tex">k</script>th smallest item in their union. How long will it take me?</p>
+
+<table class="table" id="table1">
+  <tr>
+    <th>Collection</th>
+    <th>Algorithm</th>
+    <th>Time complexity</th>
+  </tr>
+  <tr>
+    <td>Unsorted array of size $$ n$$</td>
+    <td>Median of medians</td>
+    <td>Worst case $$ O(n)$$</td>
+  </tr>
+  <tr>
+    <td>Sorted array of size $$ n$$</td>
+    <td>Binary search</td>
+    <td>Worst case $$ O(\log(n))$$</td>
+  </tr>
+  <tr>
+    <td>Order statistic tree</td>
+    <td>its native `find` implementation</td>
+    <td>Worst case $$ O(\log(n))$$</td>
+  </tr>
+  <tr>
+    <td>A bunch of unsorted data structures, of total size $$ O(n)$$</td>
+    <td>Stick it all in an array then call median of medians</td>
+    <td>Worst case $$ O(\log(n))$$</td>
+  </tr>
+  <tr>
+    <td>$$ m$$ data structures which support <code>rank</code> in $$ O(\log(n))$$, with maximum size $$ O(n)$$</td>
+    <td><a href="/2016/06/15/multi-sorted-array-quickselect.html">Multi sorted array quickselect</a></td>
+    <td>Average case $$ O(m \cdot \log(n) \cdot \log(m \cdot n))$$</td>
+  </tr>
+  <tr>
+    <td>$$ m$$ data structures which support <code>rank</code> in $$ O(\log(n))$$, with maximum size $$ O(n)$$, and also a bunch of unsorted data with total size $$ u$$</td>
+    <td>"Non-optimal solution" as described above</td>
+    <td>Average case $$ O(\log(u) \cdot m \cdot \log(n) +\\ m \cdot \log(n) \cdot \log(m \cdot n))$$</td>
+  </tr>
+</table>
+
+<p>I suspect that I can improve upon most of the algorithms listed there that I invented myself; I’ll keep this table updated.</p>
+
+<p>If you know a faster algorithm for one of these problems, please let me know!</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+
+      <p>There are a total of <script type="math/tex">2\cdot n - 1 = O(n)</script> elements in those <script type="math/tex">n</script> arrays. The inner loop will happen <script type="math/tex">\log(n)</script> times.</p>
+
+      <p>Each iteration will need to do a binary search within its array. On the first iteration the time taken will be <script type="math/tex">\sum_{i=0}^{\log(n)} \log(2^i) = O(\log(n)^2)</script>. Further iterations obviously won’t be slower than that. So we can bound above this runtime by <script type="math/tex">\log(n)</script>.</p>
+
+      <p>We can also give a proof sketch for bounding it below. Suppose that all our arrays have roughly the same distribution, so that on the <script type="math/tex">w</script>th iteration, every array has a size of only <script type="math/tex">2^{-w}</script> its original size.</p>
+
+      <script type="math/tex; mode=display">% <![CDATA[
+\begin{align} &\sum_{w=0}^{\log(n)} \sum_{i=0}^{\log(n)} \log\left(max\left(2^i \cdot 2^{-w}, 0\right)\right)  \\
+        = &\sum_{w=0}^{\log(n)} \sum_{i=0}^{w} i  \\
+        = &\sum_{w=0}^{\log(n)} O\left( w^2 \right) \\
+        = &O\left(\log(n)^3\right) \end{align} %]]></script>
+      <p><a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </section>
+</div>
+
+
+
+  </body>
+
+<script>
+if (window.location.hostname == "dfilan.github.io") {
+  window.location.hostname = "shlegeris.com";
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52980069-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</html>
+

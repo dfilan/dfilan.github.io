@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hyperactive Record</title>
+  <meta name="description" content="Here is a fun open source project which someone should build! I’ve written a readme and put it on Github but I don’t think I have the time to actually build ...">
+
+
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+  <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="canonical" href="http://danielfilan.com//2016/04/14/hyperactive-record.html">
+  <link rel="alternate" type="application/rss+xml" title="Daniel Filan" href="http://danielfilan.com//feed.xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$$', '$$'] ],
+        displayMath: [ ['$^$', '$^$']],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      messageStyle: "none",
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+    });
+  </script>
+  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+
+  <body>
+
+    
+
+    <div class="wrapper">
+  <header>
+  <h1><a href="/">Daniel Filan</a></h1>
+  <img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11659278_10202944584654914_2762452412152680044_n.jpg?oh=f017f593bd04d84d5de68bb00a736ddf&oe=58486651"/>
+  <ul>
+    <li><a href="/pdfs/cv.pdf">CV</a></li>
+    <li><a href="mailto:df@danielfilan.com">email</a></li>
+    <li><a href="/daniel_filan_public_key.asc">PGP public key</li>
+    <li><a href="https://github.com/dfilan">github</a></li>
+    <li><a href="/posts">blog</a></li>
+  </ul>
+</header>
+
+
+  <section>
+    <h2>Hyperactive Record</h2>
+    <p>Here is a fun open source project which someone should build! I’ve written a readme and put it <a href="https://github.com/bshlgrs/HyperactiveRecord/blob/master/README.md">on Github</a> but I don’t think I have the time to actually build this. I present it here in the hope that one of you might decide that you like it and want to build it!</p>
+
+<p>It’s called HyperactiveRecord. It’s an ActiveRecord plugin which tries harder to provide an intuitive, consistent, simple interface for SQL.</p>
+
+<p>For example. You’re making a blog site. You have posts and comments. Posts are either public or private. I want to load all of the publicly available comments of a user–that is, all their comments which are on public posts. (I use this example because it’s analogous to something that I did at work today.)</p>
+
+<p>Here’s what I intuitively want to do: <code class="highlighter-rouge">user.comments.filter { |c| c.post.public }</code>. This is much simpler and more readable than the ActiveRecord solution. I want to make a library whose goal is to be as simple, composable, and unsurprising as that. We’re already used to the APIs of map, flatMap, filter, reduce, and so on. That’s how our queries should work.</p>
+
+<p>This would be written basically the same way ActiveRecord is: each query method is just constructing a lazy query object which is only actually executed when accessed. Making DSLs which accept blocks is already done in Ruby all over the place; why not do it here too?</p>
+
+<p>There are some super fun places you could take this project. For example, a SQL enthusiast could devote themselves to the project of building a query generator for recursive method calls. That is, compiling</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Comment</span>
+  <span class="k">def</span> <span class="nf">descendants</span>
+     <span class="no">Hyperactive</span><span class="p">.</span><span class="nf">union</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="nb">self</span><span class="p">.</span><span class="nf">children</span><span class="p">.</span><span class="nf">flat_map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:descendants</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>into something which you can do in SQL with stored procedures or whatever. You’d have to do this by building the query graph, detecting the cycle, and doing magic SQL things which I don’t understand.</p>
+
+<p>I think this would be a super fun project! The one downside is that it involves learning to deal with ActiveRecord, which seems potentially difficult. If you want to just build a proof of concept, you could build this as a standalone library with Arel or just building SQL queries manually.</p>
+
+<p>I’d love to work with someone on this if they wanted to do the bulk of the implementation work!</p>
+
+  </section>
+</div>
+
+
+
+  </body>
+
+<script>
+if (window.location.hostname == "dfilan.github.io") {
+  window.location.hostname = "shlegeris.com";
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52980069-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</html>
+

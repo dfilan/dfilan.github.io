@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Quickselect on an unordered array and an order statistic tree</title>
+  <meta name="description" content="I did this work myself, so there are probably mistakes. I think the conclusion is right though.">
+
+
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+  <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="canonical" href="http://danielfilan.com//2016/06/12/quickselect-lemma.html">
+  <link rel="alternate" type="application/rss+xml" title="Daniel Filan" href="http://danielfilan.com//feed.xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$$', '$$'] ],
+        displayMath: [ ['$^$', '$^$']],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      messageStyle: "none",
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+    });
+  </script>
+  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+
+  <body>
+
+    
+
+    <div class="wrapper">
+  <header>
+  <h1><a href="/">Daniel Filan</a></h1>
+  <img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11659278_10202944584654914_2762452412152680044_n.jpg?oh=f017f593bd04d84d5de68bb00a736ddf&oe=58486651"/>
+  <ul>
+    <li><a href="/pdfs/cv.pdf">CV</a></li>
+    <li><a href="mailto:df@danielfilan.com">email</a></li>
+    <li><a href="/daniel_filan_public_key.asc">PGP public key</li>
+    <li><a href="https://github.com/dfilan">github</a></li>
+    <li><a href="/posts">blog</a></li>
+  </ul>
+</header>
+
+
+  <section>
+    <h2>Quickselect on an unordered array and an order statistic tree</h2>
+    <p><strong>I did this work myself, so there are probably mistakes. I think the conclusion is right though.</strong></p>
+
+<p>Suppose I have an <a href="https://en.wikipedia.org/wiki/Order_statistic_tree">order statistic tree</a> with <script type="math/tex">n</script> elements and an unordered list with <script type="math/tex">m</script> elements. Let’s say for the sake of simplicity that both are representing a set of items with no duplicates, and their intersection is empty.</p>
+
+<p>If you want to find the <script type="math/tex">k</script>th element of the order statistic tree, you can do that in <script type="math/tex">O(log(n))</script> time. And if you want to find the <script type="math/tex">k</script>th element of the array, you can use <a href="https://en.wikipedia.org/wiki/Quickselect">quickselect</a> and get it in <script type="math/tex">O(m)</script> time. I want to find the <script type="math/tex">k</script>th smallest item in the disjoint union of these lists. How quickly can I do this?</p>
+
+<p>You can do it trivially in <script type="math/tex">O(m + n)</script> time, by flattening the order statistic tree (which I’ll call an OST from here onwards) onto the end of the array. Or you can add everything in the array to the OST and then query the OST, in <script type="math/tex">O(m \cdot \log(n + m))</script> time.</p>
+
+<p>I have found solutions that run in <script type="math/tex">O(m \cdot \log(n))</script>, <script type="math/tex">O(m + \log(m) \cdot \log(n))</script>, and <script type="math/tex">O(m + \log(n))</script>. The last of these is really complicated and annoying; the first two are pretty simple.</p>
+
+<h2 id="order-statistic-trees">Order statistic trees</h2>
+
+<p>I’m going to write code in Ruby, in which the <code class="highlighter-rouge">filter</code> method is stupidly named <code class="highlighter-rouge">select</code>. OSTs are usually presented with a method called <code class="highlighter-rouge">select(k)</code> which finds the <script type="math/tex">k</script>th smallest element. In this post I’m going to use the method name <code class="highlighter-rouge">find_kth_smallest</code> instead.</p>
+
+<p>I’m going to assume that my OSTs have the following methods:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">smallers</code>: returns the left subtree</li>
+  <li><code class="highlighter-rouge">largers</code>: returns the right subtree</li>
+  <li><code class="highlighter-rouge">pivot</code>: returns the value of the root node</li>
+  <li><code class="highlighter-rouge">count</code>: returns the number of items in the node</li>
+  <li><code class="highlighter-rouge">find_kth_smallest(k)</code>: as discussed above</li>
+  <li><code class="highlighter-rouge">rank(x)</code>: finds the number of elements in the OST smaller than <code class="highlighter-rouge">x</code>. This takes <script type="math/tex">O(\log(n))</script> in an OST.</li>
+  <li><code class="highlighter-rouge">split_on_left_by_value(x)</code>: returns a new tree with only the items in the OST which are less than <code class="highlighter-rouge">x</code>. If our OSTs are immutable, this only takes <script type="math/tex">\log(n)</script> time.</li>
+  <li><code class="highlighter-rouge">split_on_right_by_value(x)</code>: like <code class="highlighter-rouge">split_on_left_by_value</code>, but the other side.</li>
+</ul>
+
+<h2 id="standard-quickselect">Standard quickselect</h2>
+
+<p>Just for reference, here’s an unoptimized implementation of quickselect. This has average case performance <script type="math/tex">O(n)</script>.</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1"># assumes that the list has all unique elements</span>
+<span class="c1"># returns the same thing as array.sort[n]</span>
+<span class="k">def</span> <span class="nf">quickselect</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+  <span class="c1"># choose a random pivot</span>
+  <span class="n">pivot_element</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="nf">sample</span>
+
+  <span class="n">smallers</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="nf">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">pivot_element</span> <span class="p">}</span>
+  <span class="n">largers</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="nf">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">pivot_element</span> <span class="p">}</span>
+
+  <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">smallers</span><span class="p">.</span><span class="nf">length</span>
+    <span class="n">quickselect</span><span class="p">(</span><span class="n">smallers</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+  <span class="k">elsif</span> <span class="n">n</span> <span class="o">==</span> <span class="n">smallers</span><span class="p">.</span><span class="nf">length</span>
+    <span class="n">pivot_element</span>
+  <span class="k">else</span>
+    <span class="n">quickselect</span><span class="p">(</span><span class="n">largers</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="n">smallers</span><span class="p">.</span><span class="nf">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>This has average case <script type="math/tex">O(n)</script> performance because the recurrence relation is:</p>
+
+<p>$^$f(n) = f\left(\frac{n}2\right) + n$^$</p>
+
+<h2 id="modified-quickselect-attempt-1--om-cdot-logn">Modified quickselect, attempt 1: <script type="math/tex">O(m \cdot \log(n))</script></h2>
+
+<p>Let’s modify this to also use an OST.</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1"># OST has size n</span>
+<span class="c1"># array has size m</span>
+<span class="c1"># this returns the same thing as (array + ost.to_a).sort[k]</span>
+<span class="k">def</span> <span class="nf">double_quickselect_v1</span><span class="p">(</span><span class="n">ost</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+  <span class="n">smallers</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="nf">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">ost</span><span class="p">.</span><span class="nf">pivot</span> <span class="p">}</span>
+  <span class="n">largers</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="nf">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">ost</span><span class="p">.</span><span class="nf">pivot</span> <span class="p">}</span>
+
+  <span class="n">number_of_smaller_things</span> <span class="o">=</span> <span class="n">smallers</span><span class="p">.</span><span class="nf">length</span> <span class="o">+</span> <span class="n">ost</span><span class="p">.</span><span class="nf">smallers</span><span class="p">.</span><span class="nf">count</span>
+
+  <span class="k">if</span> <span class="n">number_of_smaller_things</span> <span class="o">&gt;</span> <span class="n">k</span>
+    <span class="n">double_quickselect_v1</span><span class="p">(</span><span class="n">smallers</span><span class="p">,</span> <span class="n">ost</span><span class="p">.</span><span class="nf">smallers</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+  <span class="k">elsif</span> <span class="n">number_of_smaller_things</span> <span class="o">==</span> <span class="n">k</span>
+    <span class="n">ost</span><span class="p">.</span><span class="nf">pivot</span>
+  <span class="k">else</span>
+    <span class="n">double_quickselect_v1</span><span class="p">(</span><span class="n">largers</span><span class="p">,</span> <span class="n">ost</span><span class="p">.</span><span class="nf">largers</span><span class="p">,</span> <span class="n">k</span> <span class="o">-</span> <span class="n">number_of_smaller_things</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>Every time we make a recursive call, our order statistic tree halves in size. Our array might not get smaller though: eg if everything in your array is smaller than everything in your OST. Our OST has depth <script type="math/tex">\log(n)</script>, and in the worst case you need to iterate over everything in your array every time. So this is <script type="math/tex">O(m \cdot \log(n))</script>.</p>
+
+<p>Can we do better? I think we can. Intuitively, it seems like this algorithm works to shrink the OST as fast as possible, and not really worry about the array. But the array is where most of the cost comes from. So we should try to organize this algorithm so that instead of halving the size of the OST every time, it halves the size of the array every time.</p>
+
+<h2 id="modified-quickselect-attempt-2--om--logm-cdot-logn">Modified quickselect, attempt 2: <script type="math/tex">O(m + \log(m) \cdot \log(n))</script></h2>
+
+<p>Instead of using the OST’s pivot, let’s pivot on a randomly selected member of the array, like in normal quickselect. This means that the array is probably going to shrink with every recursive call.</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1"># OST has size n</span>
+<span class="c1"># array has size m</span>
+<span class="c1"># this returns the same thing as (array + ost.to_a).sort[k]</span>
+<span class="k">def</span> <span class="nf">double_quickselect_v2</span><span class="p">(</span><span class="n">ost</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+  <span class="n">pivot_element</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="nf">sample</span>
+  <span class="n">smallers</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="nf">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">pivot_element</span> <span class="p">}</span>
+  <span class="n">largers</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="nf">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">pivot_element</span> <span class="p">}</span>
+
+  <span class="n">number_of_smaller_things</span> <span class="o">=</span> <span class="n">smallers</span><span class="p">.</span><span class="nf">length</span> <span class="o">+</span> <span class="n">ost</span><span class="p">.</span><span class="nf">rank</span><span class="p">(</span><span class="n">pivot_element</span><span class="p">)</span>
+
+  <span class="k">if</span> <span class="n">number_of_smaller_things</span> <span class="o">&gt;</span> <span class="n">k</span>
+    <span class="n">double_quickselect_v2</span><span class="p">(</span><span class="n">smallers</span><span class="p">,</span>
+                        <span class="n">ost</span><span class="p">.</span><span class="nf">split_on_right_by_value</span><span class="p">(</span><span class="n">pivot_element</span><span class="p">),</span>
+                        <span class="n">k</span><span class="p">)</span>
+  <span class="k">elsif</span> <span class="n">number_of_smaller_things</span> <span class="o">==</span> <span class="n">k</span>
+    <span class="n">ost</span><span class="p">.</span><span class="nf">pivot</span>
+  <span class="k">else</span>
+    <span class="n">double_quickselect_v2</span><span class="p">(</span><span class="n">largers</span><span class="p">,</span>
+                        <span class="n">ost</span><span class="p">.</span><span class="nf">split_on_left_by_value</span><span class="p">(</span><span class="n">pivot_element</span><span class="p">),</span>
+                        <span class="n">k</span> <span class="o">-</span> <span class="n">number_of_smaller_things</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>So now the array is going to shrink on average by a factor of 2 every recursive call, but in the worst case the tree will stay the same size every time. So we now expect to <script type="math/tex">\log(m)</script> recursive calls, for a total cost of <script type="math/tex">O(m + \log(m) \cdot \log(n))</script>.</p>
+
+<p>(Incidentally, calling <code class="highlighter-rouge">ost.split_on_left_by_value</code> doesn’t affect the asymptotic runtime of this function, because this only decreases the size of <code class="highlighter-rouge">ost</code> by a constant multiplier in expectation, and it doesn’t cause <code class="highlighter-rouge">ost.rank(pivot_element)</code> to run asymptotically faster.)</p>
+
+<p>Okay, this is better. But can we improve it even more?</p>
+
+<h2 id="sketch-of-a--om--logn-solution">Sketch of a <script type="math/tex">O(m + \log(n))</script> solution</h2>
+
+<p>I’m pretty sure I have an optimal solution, but it’s really complicated and annoying.</p>
+
+<p>The problem was that in the previous algorithms, sometimes I computed expensive things for the data structures without any guarantee that they’d end up smaller. This time, I want to either compute tertiles for a data structure and shrink it, or ignore it.</p>
+
+<p>For this to work, we’re going to need our OST to be a <a href="https://en.wikipedia.org/wiki/Weight-balanced_tree">weight-balanced tree</a>. Let’s set <script type="math/tex">\alpha = \frac 14</script>. (Actually, I think this algorithm works with non-weight-balanced trees, but I don’t know how to prove the time bound without the weight balance.)</p>
+
+<p>Here’s how: At the start of every recursive call, we look at the relative sizes of the two data structures. If one is much larger than the other, we’re going to shrink the large one and ignore the small one. If they’re within a factor of 2 of each other, we’re going to call the expensive methods on both then shrink one of them.</p>
+
+<p>If you want the gory details, read on.</p>
+
+<h3 id="case-1-one-is-much-larger-than-the-other">Case 1: one is much larger than the other</h3>
+
+<p>Suppose one data structure has more than three times as many things in it as the other one does. Let’s call the two data structures <code class="highlighter-rouge">Big</code> and <code class="highlighter-rouge">Small</code>. <code class="highlighter-rouge">Big</code> has size <script type="math/tex">b</script>, <code class="highlighter-rouge">Small</code> has size <script type="math/tex">s</script>.</p>
+
+<p>Suppose we have 100 things in <code class="highlighter-rouge">Big</code> and 10 things in <code class="highlighter-rouge">Small</code>. We want to find the 15th largest thing in <code class="highlighter-rouge">Big ++ Small</code>. Let’s call the result <script type="math/tex">x</script>.</p>
+
+<p><script type="math/tex">x</script> can’t be more than <code class="highlighter-rouge">Big.find_kth_smallest(15)</code>, because by definition there are 15 things in <code class="highlighter-rouge">Big</code> less than that.</p>
+
+<p>And <script type="math/tex">x</script> can’t be less than <code class="highlighter-rouge">Big.find_kth_smallest(5)</code>, because there are only 5 things in <code class="highlighter-rouge">Big</code> less than that, and there are only 10 things in Small.</p>
+
+<p>So if we’re looking for the <code class="highlighter-rouge">k</code>th item in <code class="highlighter-rouge">Big ++ Small</code>, we can discard everything bigger than <code class="highlighter-rouge">Big.find_kth_smallest(k)</code>, and everything smaller than <code class="highlighter-rouge">Big.find_kth_smallest(k + s)</code>.</p>
+
+<h4 id="case-1a-the-array-is-larger">Case 1a: the array is larger</h4>
+
+<p>If the array is the larger data structure, then we do this discard by calling quickselect twice and copying everything between the two results to a new array. This takes <script type="math/tex">O(m)</script> time, and the resulting array is at most size <script type="math/tex">s</script>. So we made our array half its original size.</p>
+
+<h4 id="case-1b-the-ost-is-larger">Case 1b: the OST is larger</h4>
+
+<p>If the tree is the larger data structure, then things are somewhat more annoying, because we only want to take constant time.</p>
+
+<p>Selecting exactly the first <script type="math/tex">k</script> things in an OST takes <script type="math/tex">\log(n)</script> time. I’m going to suggest that instead of selecting exactly the first <script type="math/tex">k</script> things, we should go a few layers deep in our OST and then delete only the nodes which we know we can safely delete.</p>
+
+<p>Because we’re using weight-balanced trees with a weight balancing factor of <script type="math/tex">\frac 14</script>, we might need to go down maybe 3 layers in order to get a node with enough weight that deleting it deletes half the weight that you’d be able to delete if you called <code class="highlighter-rouge">split_on_left_by_value</code>. (I’m not sure about the number 3 being correct, but I think this is true for some constant.)</p>
+
+<p>We could safely remove <script type="math/tex">\frac 12</script> of the tree if we used the normal split methods. We’re going to remove more than half of that, so at worst our tree will end up <script type="math/tex">\frac 34</script> of its original size.</p>
+
+<p>So in both cases, we end up with the bigger data structure being a constant factor smaller.</p>
+
+<h3 id="case-2-the-data-structures-are-a-similar-size">Case 2: the data structures are a similar size</h3>
+
+<p>Oh man, this gets messy. I’m going to call this bit an “algorithm sketch”, because then you can’t criticise me for being handwavy.</p>
+
+<p>Get approximate tertiles from the OST and exact tertiles from the array. This takes <script type="math/tex">O(m)</script> time for the array and <script type="math/tex">O(1)</script> time for the OST.</p>
+
+<p>Then you compare these two inter-tertile ranges. There are three cases: they can intersect, they can be disjoint, or one can be inside the other. In each of these cases, based on your value of <script type="math/tex">k</script> you can rule out at least a third of at least one of the two data structures. This is just a massive mess of cases. Here’s a diagram of one way it can play out when the ranges intersect:</p>
+
+<p><img src="/img/ost_diagram.jpg" alt="diagram" /></p>
+
+<p>This is a diagram of what happens when one data structure has 30 items and the other has 60 items. It contains all of the different cases for <script type="math/tex">k</script>. For example, when <script type="math/tex">k</script> is 35, then we can discard the upper and lower thirds of the 30 item data structure, and we can discard the upper third of the 60 item data structure.</p>
+
+<p>You can draw similar diagrams for the other cases.</p>
+
+<p>This part is the sketchiest part of the whole algorithm. I’m pretty sure that you can always decrease at least one of the data structures by one third. I’m not sure if you can always shrink both of them. I’m not sure how much you can shrink the OST in constant time; I’m pretty sure you can do at least <script type="math/tex">\frac 16</script>, and I think that for any fraction less than <script type="math/tex">\frac 13</script>, you can choose a node depth such that you can always cut that fraction out in constant time.</p>
+
+<h3 id="runtime-of-this-solution">Runtime of this solution</h3>
+
+<p>If one of the data structures starts out much larger than the other one, it will shrink until they’re similar sizes. This takes <script type="math/tex">O(m)</script> time for the array and <script type="math/tex">O(\log(n))</script> time for the OST.</p>
+
+<p>Once they’re the same size, I think that at least one of them will both shrink by one third every time. So we have the recurrence relation:</p>
+
+<p>$^$f(n, m) = f \left( \frac {2n}3, \frac {2m}3\right) + m + 1$^$</p>
+
+<p>which evaluates to <script type="math/tex">\log(n) + m</script>.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>So we can do quick select on an OST and array at the same time in <script type="math/tex">O(m + \log(n))</script>.</p>
+
+<p>My work here leaves a lot to be desired. Most obviously, my fastest algorithm is extremely complicated and inelegant; I bet that can be simplified.</p>
+
+  </section>
+</div>
+
+
+
+  </body>
+
+<script>
+if (window.location.hostname == "dfilan.github.io") {
+  window.location.hostname = "shlegeris.com";
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52980069-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</html>
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Kelly bettors</title>
+  <meta name="description" content="The Kelly Criterion">
+
+
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+  <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="canonical" href="http://danielfilan.com//2016/11/18/kelly.html">
+  <link rel="alternate" type="application/rss+xml" title="Daniel Filan" href="http://danielfilan.com//feed.xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$$', '$$'] ],
+        displayMath: [ ['$^$', '$^$']],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      messageStyle: "none",
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+    });
+  </script>
+  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+
+  <body>
+
+    
+
+    <div class="wrapper">
+  <header>
+  <h1><a href="/">Daniel Filan</a></h1>
+  <img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11659278_10202944584654914_2762452412152680044_n.jpg?oh=f017f593bd04d84d5de68bb00a736ddf&oe=58486651"/>
+  <ul>
+    <li><a href="/pdfs/cv.pdf">CV</a></li>
+    <li><a href="mailto:df@danielfilan.com">email</a></li>
+    <li><a href="/daniel_filan_public_key.asc">PGP public key</li>
+    <li><a href="https://github.com/dfilan">github</a></li>
+    <li><a href="/posts">blog</a></li>
+  </ul>
+</header>
+
+
+  <section>
+    <h2>Kelly bettors</h2>
+    <h3 id="the-kelly-criterion">The Kelly Criterion</h3>
+
+<p>The Kelly criterion for betting tells you how much to wager when someone offers you a bet. First introduced in <a href="http://www.herrold.com/brokerage/kelly.pdf">this paper</a>, it deals with the situation where someone is offering you a contract that pays you €1 if the event <script type="math/tex">E</script> (for concreteness, you can imagine <script type="math/tex">E</script> as the event that the Republican candidate wins the 2020 US Presidential election) and €0 otherwise. They are selling it for €<script type="math/tex">p</script>, and your probability for <script type="math/tex">E</script> is <script type="math/tex">q > p</script> (this is equivalent to the more common formulation with odds, but it’s easier for me to think about). As a result, you think that it’s worth buying this contract. In fact, they will sell you a scaled-up contract of your choice: for any real number <script type="math/tex">r \geq 0</script>, you can buy a contract that pays you €<script type="math/tex">r/p</script> if <script type="math/tex">E</script> occurs for €<script type="math/tex">r</script>, just as if you could buy <script type="math/tex">r/p</script> copies of the original contract. The question you face is this: how much of your money should you spend on this scaled-up contract? The Kelly criterion gives you an answer: you should spend <script type="math/tex">(q-p)/(1-p)</script> of your money.</p>
+
+<p>Why would you spend this exact amount? One reason would be if you were an expected utility maximiser, and your utility was the logarithm of your wealth. Note that the logarithm is important here to make you risk averse: if you simply wanted to maximise your expected wealth after the bet, you would bet all your money. To show that expected log-wealth maximisers use the Kelly criterion, note that if your initial wealth is <script type="math/tex">W</script>, you spend <script type="math/tex">fW</script> on the scaled contract, and <script type="math/tex">E</script> occurs, you then have <script type="math/tex">(1-f)W + fW/p</script>, while if you bet that much and <script type="math/tex">E</script> does not occur, your wealth is only <script type="math/tex">(1-f)W</script>. The expected log-wealth maximiser therefore wants to maximise <script type="math/tex">q\log ((1-f)W + fW/p) + (1-q) \log ((1-f)W) = q \log(1 - f + f/p) + (1-q) \log (1-f) + \log (W)</script>. The derivative of this with respect to <script type="math/tex">f</script> is <script type="math/tex">(q/(1-f + f/p))(1/p - 1) - (1-q)/(1-f)</script>. Setting this derivative to 0 and rearranging produces the stated formula.</p>
+
+<p>The <a href="https://en.wikipedia.org/w/index.php?title=Kelly_criterion&amp;oldid=742759833#Proof">Wikipedia page</a> as of 25 October 2016 gives another appealing fact about Kelly betting. Suppose that this contract-buying opportunity recurs again and again: that is, there are many events <script type="math/tex">E_t</script> in a row that you think each independently have probability <script type="math/tex">q</script>, and after your contract about <script type="math/tex">E_{t-1}</script> resolves, you can always spend €<script type="math/tex">r</script> on a contract that will pay €<script type="math/tex">r/p</script> if <script type="math/tex">E_t</script> happens. Suppose that you always spend <script type="math/tex">f</script> of your wealth on these contracts, you make <script type="math/tex">N</script> of these bets, and <script type="math/tex">K</script> pay off. Then, your final wealth after the <script type="math/tex">N</script> bets will be <script type="math/tex">(1-f+f/p)^K (1-f)^{N-K} W</script>. The derivative of this with respect to <script type="math/tex">f</script> is <script type="math/tex">(K(1-f+f/p)^{K-1}(1/p - 1)(1-f)^{N-K} - (1-f+f/p)^K (N-K)(1-f)^{N-K-1})W</script>. Setting this to 0 gives <script type="math/tex">f = K/N - ((N-K)/N)(p/(1-p))</script>, and if <script type="math/tex">K/N = q</script> (which it should in the long run), this simplifies to <script type="math/tex">f = (q-p)/(1-p)</script>, the Kelly criterion. This makes it look like Kelly betting maximises your total wealth after the <script type="math/tex">N</script> runs, so why wouldn’t an expected wealth maximiser use the Kelly criterion? Well, the rule of betting all your money every chance you have leaves you with nothing if <script type="math/tex">K = qN</script>, but in the unlikely case that <script type="math/tex">K = N</script>, the rule works out so well that expected wealth maximisers think that it’s worth the risk.</p>
+
+<p>Before I move on, I’d like to share one interesting fact about the Kelly criterion that gives a flavour of the later results. You might wonder what the expected utility of using the Kelly criterion is. Well, by simple substitution it’s just <script type="math/tex">q \log (q/p) + (1-q) \log ((1-q)/(1-p)) + \log (W)</script>. Ignoring the <script type="math/tex">\log (W)</script> utility that you already have, this is just:</p>
+
+<p><span>$^$D_{KL}(q||p)$^$</span></p>
+
+<p>Bam! <a href="https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence">Information theory!</a></p>
+
+<h3 id="kelly-bettors-in-prediction-markets">Kelly bettors in prediction markets</h3>
+
+<p>Previously, we talked about the case where somebody was offering to sell you a contract at a fixed price, and all you could do was keep it. Instead, we can consider a market full of these contracts, where all of the participants are log wealth maximisers, and think about what the equilibrium price is. Our proof will be similar to the one found <a href="https://arxiv.org/pdf/1201.6655.pdf">here</a>.</p>
+
+<p>Before diving into the math, let’s clarify exactly what sort of situation we’re imagining. First of all, there are going to be lots of contracts available that correspond to different outcomes in the same event, at least one of which will occur. For instance, the event could be “Who will win the Republican nomination for president in 2020?”, and the outcomes could be “Donald Trump”, “Jeb Bush”, “Ben Sasse”, and all the other candidates (once they are known - before then, the outcomes could be each member of a list of prominent Republicans and one other outcome corresponding to “someone else”). Alternatively, the event could be “What will the map of winners of each state in the 2020 presidential election be?”, and the outcomes would be lists of the form “Republicans win Alabama, Democrats win Alaska, Democrats win Arizona, …”. This latter type of market actually forms a <a href="http://blog.oddhead.com/2008/12/22/what-is-and-what-good-is-a-combinatorial-prediction-market/">combinatorial prediction market</a> – by buying and short-selling bundles of contracts, you can make bets of the form “Republicans will win Georgia”, “If Democrats win Ohio, then Republicans will win Florida”, or “Republicans will win either North Dakota or South Dakota, but not both”. Such markets are interesting for their own reasons, but we will not elaborate on them here.</p>
+
+<p>We should also clarify our assumptions about the traders. The participants are log wealth maximisers who have different priors and don’t think that the other participants know anything that they don’t – otherwise, the <a href="https://en.wikipedia.org/wiki/No-trade_theorem">no-trade theorem</a> could apply. We also assume that they are <a href="http://www.investopedia.com/terms/p/pricetaker.asp">price takers</a>, who decide to buy or sell contracts at whatever the equilibrium price is, not considering how their trades effect the equilibrium price.</p>
+
+<p>Now that we know the market setup, we can derive the purchasing behaviour of the participants for a given market price. We will index market participants by <script type="math/tex">i</script> and outcomes by <script type="math/tex">j</script>. We write <script type="math/tex">p^m_j</script> for the market price of the contract that pays €1 if outcome <script type="math/tex">j</script> occurs, <script type="math/tex">p^i_j</script> for the probability that participant <script type="math/tex">i</script> assigns to outcome <script type="math/tex">j</script>, and <script type="math/tex">W^i</script> for the initial wealth of participant <script type="math/tex">i</script>.</p>
+
+<p>First of all, without loss of generality, we can assume that participant <script type="math/tex">i</script> spends all of their wealth on contracts. This is because if they spend some money on all contracts, they are guaranteed some payoff, just as if they had saved some money. We can therefore write the amount that participant <script type="math/tex">i</script> spends on contracts for outcome <script type="math/tex">j</script> as <script type="math/tex">W^i q^i_j</script>, under the condition that <script type="math/tex">\sum_j q^i_j = 1</script>. Then, if outcome <script type="math/tex">j</script> occurs, their posterior wealth will be <script type="math/tex">W^i q^i_j / p^m_j</script>. We can use the method of Lagrange multipliers to determine how much participant <script type="math/tex">i</script> will bet on each outcome, by maximising <script type="math/tex">L(q^i, \lambda) = \sum_j p^i_j \log (W^i q^i_j / p^m_j) - \lambda ( \sum_j q^i_j - 1)</script>. Taking partial derivatives, <script type="math/tex">\partial L/\partial q^i_j = p^i_j/q^i_j - \lambda = 0</script>, so <script type="math/tex">q^i_j = p^i_j / \lambda</script>, and <script type="math/tex">\partial L/\partial \lambda = \sum_j q^i_j - 1 = 0</script>, so <script type="math/tex">\lambda^{-1} \sum_j p^i_j = 1</script>, so <script type="math/tex">\lambda = 1</script>. Therefore, regardless of the market prices, participant <script type="math/tex">i</script> will spend <script type="math/tex">W^i p^i_j</script> on contracts for outcome <script type="math/tex">j</script>. You might notice that this looks different to the previous section – this is because previously our bettor could only bet on one outcome, as opposed to betting on both.</p>
+
+<p>Next, we can generalise to the case where the market participants save some amount of money, buy some contracts, and sell some others. This will be important for deriving the equilibrium market behaviour, since you can’t have a market where everyone wants to buy contracts and nobody wants to sell them.</p>
+
+<p>Suppose trader <script type="math/tex">i</script> saves <script type="math/tex">W^i s^i</script> and spends <script type="math/tex">W^i q^i_j</script> on contracts for each outcome <script type="math/tex">j</script>. Here, we allow <script type="math/tex">q^i_j</script> to be negative - this means that <script type="math/tex">i</script> will sell another trader <script type="math/tex">-W^i q^i_j</script> worth of contracts, and will supply that trader with <script type="math/tex">-W^i q^i_j/p^m_j</script> if outcome <script type="math/tex">j</script> occurs. We now demand that <script type="math/tex">s^i + \sum_j q^i_j = 1</script> for <script type="math/tex">s_i</script> to make sense. Now, if outcome <script type="math/tex">j</script> occurs, trader <script type="math/tex">i</script>’s wealth will be <script type="math/tex">W^i(s^i + q^i_j/p^m_j)</script> – if <script type="math/tex">q^i_j > 0</script> then the trader makes money off their contracts in outcome <script type="math/tex">j</script>, and if <script type="math/tex">% <![CDATA[
+q^i_j < 0 %]]></script> then the trader pays their dues to the holder of the contract in outcome <script type="math/tex">j</script> they sold. We’d like this to be equal to <script type="math/tex">W^i p^i_j/p^m_j</script>, so that the trader’s wealth is the same as if they had saved all their money. This happens if <script type="math/tex">s^i + q^i_j/p^m_j = p^i_j/p^m_j</script>, i.e. <script type="math/tex">q^i_j = p^i_j - s^i p^m_j</script>.</p>
+
+<p>Now that we have the behaviour of each trader for a fixed market price, we can derive the equilibrium prices of the market. At equilibrium, supply should be equal to demand, meaning that there are as many contracts being bought as being sold: for all <script type="math/tex">j</script>, <script type="math/tex">\sum_i W^i q^i_j = 0</script>. This implies that <script type="math/tex">\sum_i W^i (p^i_j - s^i p^m_j) = 0</script>, or <script type="math/tex">p^m_j = (\sum_i W^i p^i_j)/(\sum_i W^i s^i)</script>. It must also be the case that <script type="math/tex">\sum_j p^m_j = 1</script>, since otherwise the agents could arbitrage, putting pressure on the prices to satisfy <script type="math/tex">\sum_j p^m_j = 1</script>. This means that <script type="math/tex">\sum_j (\sum_i W^i p^i_j)/(\sum_i W^i s^i) = 1</script>, implying that <script type="math/tex">\sum_i W^i = \sum_i W^i s^i</script> and <script type="math/tex">p^m_j = \sum_i W^i p^i_j / (\sum_i W^i)</script>.</p>
+
+<p>Note the significance of this price: it’s as if we have a Bayesian mixture where each trader corresponds to a hypothesis, our prior in hypothesis <script type="math/tex">i</script> is <script type="math/tex">h^i = W^i / (\sum_i W^i)</script>, and the market price is the Bayesian mixture probability <script type="math/tex">\sum_i h^i p^i_j</script>. How much wealth does the participant/hypothesis have after we know the outcome? Exactly <script type="math/tex">W_i p^i_j (\sum_i W^i) / (\sum_i W^i p^i_j) = (\sum_i W_i) h^i p^i_j / (\sum_i h^i p^i_j)</script>, proportional to the posterior probability of that hypothesis. Our market has done an excellent job of replicating a Bayesian mixture!</p>
+
+  </section>
+</div>
+
+
+
+  </body>
+
+<script>
+if (window.location.hostname == "dfilan.github.io") {
+  window.location.hostname = "shlegeris.com";
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52980069-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</html>
+

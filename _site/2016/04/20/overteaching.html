@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Overteaching and overlearning</title>
+  <meta name="description" content="(I’m talking about computer science here because that’s the only topic I know really well, but this might generalize anyway.)">
+
+
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+  <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="canonical" href="http://danielfilan.com//2016/04/20/overteaching.html">
+  <link rel="alternate" type="application/rss+xml" title="Daniel Filan" href="http://danielfilan.com//feed.xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$$', '$$'] ],
+        displayMath: [ ['$^$', '$^$']],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      messageStyle: "none",
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+    });
+  </script>
+  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+
+  <body>
+
+    
+
+    <div class="wrapper">
+  <header>
+  <h1><a href="/">Daniel Filan</a></h1>
+  <img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11659278_10202944584654914_2762452412152680044_n.jpg?oh=f017f593bd04d84d5de68bb00a736ddf&oe=58486651"/>
+  <ul>
+    <li><a href="/pdfs/cv.pdf">CV</a></li>
+    <li><a href="mailto:df@danielfilan.com">email</a></li>
+    <li><a href="/daniel_filan_public_key.asc">PGP public key</li>
+    <li><a href="https://github.com/dfilan">github</a></li>
+    <li><a href="/posts">blog</a></li>
+  </ul>
+</header>
+
+
+  <section>
+    <h2>Overteaching and overlearning</h2>
+    <p>(I’m talking about computer science here because that’s the only topic I know really well, but this might generalize anyway.)</p>
+
+<p>Most university classes have a few concepts in them that you should remember forever, and a bunch of other concepts that you forget immediately after the final.</p>
+
+<p>Is it a total waste of time to teach things that people are going to forget? I don’t think so, for a few reasons. To start with, sometimes you teach people about a particular specific topic with the goal of them getting a feel for the kind of things that you do in that field more generally. A classic example is sorting algorithms—you rarely actually need to implement a sorting algorithm, but studying them is a pretty good way of getting a feel for different ways of designing algorithms[1]. Even though people will forget the fiddly details of implementing quicksort in place, hopefully they’ll remember the insight that you can split things into smaller subproblems, recursively solve those, and merge the results. Relatedly, it often works nicely to teach people about an important problem by making them study the solutions to it—for example, I don’t remember the algorithms which are actually used in practice for scheduling in operating systems, but I remember the concepts better because I studied them in my OS class.</p>
+
+<p>More generally, students empirically learn concepts better if they then practice using those concepts in more advanced ways. For example, you remember your algebra course better if you then do a calculus course that relies on it. A lot of practical computer science courses could be justified by pointing out that even if they teach you totally useless things, you hopefully at least practiced programming.</p>
+
+<p>However, for this to work, the more advanced material needs to actually rely on the core material. I think many computer science courses do not do a good job of this.</p>
+
+<p>For example. Suppose you want to ensure that your students finish their algorithms course and remember binary search trees. You spend the obligatory week on binary search trees, and teach them about red-black trees to the extent that when I interview them a year later they can say “uh, some nodes are red and some nodes are black and black children only have red parents or something like that.” And now you’re not sure what to teach them next.</p>
+
+<p>Algorithms courses often say “Well, I guess we’re done with BSTs. Now that the core stuff is out of the way, let’s teach them about max flow and spanning tree algorithms!”</p>
+
+<p>I think this is a terrible idea! Students learn those algorithms, but they’re kind of confusing and don’t come up much in the rest of your life, so they forget them. And the learning process didn’t even work as over learning, because it wasn’t giving them practice reasoning about BSTs.</p>
+
+<p>Instead, you should teach them more advanced things about BSTs! Teach them about BTrees (and the <a href="http://web.stanford.edu/class/cs166/lectures/05/Small05.pdf">isometry between those and red-black trees</a>)! Make them implement splay trees and treaps. Tell them about <a href="http://web.stanford.edu/class/cs166/lectures/06/Small06.pdf">augmented binary search</a> trees.</p>
+
+<p>These things are not particularly easier or harder than just teaching them about other algorithms stuff. And the students will probably forget all of it in a year. But they will do a much better job of giving the students excuses to think really carefully about how BSTs work, so they’ll be more fluent with those when they come up.</p>
+
+<p>(This is the approach taken by the amazing course CS166 at Stanford, which I was linking above. As far as I’m concerned, all other algorithms courses should imitate CS166 as much as possible.)</p>
+
+<p>Classic examples of things which CS classes teach which do not work well as over learning: Minimum spanning tree algorithms. The Floyd Marshall algorithm. Dijkstra’s algorithm, when it isn’t taught as uniform cost search. (This one particularly annoys me because most students try to learn it, but most of them don’t realize the connection between it and BFS. AFAICT this is just for historical reasons: when Dijkstra originally presented the algorithm it wasn’t written as BFS with a priority queue, and CS departments have a bizarre fixation on presenting ideas as they’ve been historically presented.</p>
+
+<p>[1] Sadly, most courses which do this teach you about things like divide and conquer and greedy algorithms, but neglect the single most important part of designing a good algorithm, which is choosing the right data structures. Skiena’s textbook does a great job of avoiding this mistake: it presents heapsort as selection sort optimized by using a faster data structure.</p>
+
+<hr />
+
+<p><a href="https://www.facebook.com/bshlgrs/posts/10207490190427645?pnref=story">view comments on Facebook</a></p>
+
+  </section>
+</div>
+
+
+
+  </body>
+
+<script>
+if (window.location.hostname == "dfilan.github.io") {
+  window.location.hostname = "shlegeris.com";
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52980069-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</html>
+

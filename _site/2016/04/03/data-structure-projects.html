@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Data structure projects</title>
+  <meta name="description" content="Here are some ideas for fun projects with data structures! I get really excited about data structures and if you want to ask me for clarification of any of t...">
+
+
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+  <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="canonical" href="http://danielfilan.com//2016/04/03/data-structure-projects.html">
+  <link rel="alternate" type="application/rss+xml" title="Daniel Filan" href="http://danielfilan.com//feed.xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$$', '$$'] ],
+        displayMath: [ ['$^$', '$^$']],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      messageStyle: "none",
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+    });
+  </script>
+  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+
+  <body>
+
+    
+
+    <div class="wrapper">
+  <header>
+  <h1><a href="/">Daniel Filan</a></h1>
+  <img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11659278_10202944584654914_2762452412152680044_n.jpg?oh=f017f593bd04d84d5de68bb00a736ddf&oe=58486651"/>
+  <ul>
+    <li><a href="/pdfs/cv.pdf">CV</a></li>
+    <li><a href="mailto:df@danielfilan.com">email</a></li>
+    <li><a href="/daniel_filan_public_key.asc">PGP public key</li>
+    <li><a href="https://github.com/dfilan">github</a></li>
+    <li><a href="/posts">blog</a></li>
+  </ul>
+</header>
+
+
+  <section>
+    <h2>Data structure projects</h2>
+    <p>Here are some ideas for fun projects with data structures! I get really excited about data structures and if you want to ask me for clarification of any of these I’m super super happy to talk to you about them!</p>
+
+<h2 id="heap-insertion-time">Heap insertion time</h2>
+
+<p><strong>Edit: Jim Terry figured this one out for me! He says that Bollobas and Simon, “Repeated random insertion into a priority queue.” proves that it’s average case constant time.</strong></p>
+
+<p>What’s the average case insertion time for a binary heap? For some reason, this super simple question doesn’t have a crisp answer obviously available on the internet. There are some <a href="http://wcipeg.com/wiki/Binary_heap#Insertion_2">shitty hand-wavy proofs</a> that it’s constant time, but nothing that I find very legit. Wikipedia’s <a href="https://en.wikipedia.org/wiki/Talk:Binary_heap#Weak_proof_for_O.281.29_average-case_insertion">talk page for Binary Heap</a> has some information on the controversy. To add to the confusion, CLRS sort of implies that it’s log(n) time.</p>
+
+<p>The primary problem with the proof attempts I’ve seen is that the product of inserting a random value into a random heap is not a random heap, and so the proof would require proving things about the kinds of heaps produced by random insertions. I’d also be somewhat satisfied with strong numerical evidence for constant time.</p>
+
+<p>This might be a solved problem whose answer I just haven’t been able to find in an hour or so of Googling, in which case the project wouldn’t be very interesting, but at least you’d make me very happy by telling me the answer!</p>
+
+<h2 id="obscure-binary-search-trees">Obscure binary search trees</h2>
+
+<p>There are lots of little-known self-balancing BST implementations. Basically no-one has heard of any except AVL trees, red-black trees, and BTrees.</p>
+
+<p>You could implement a lesser-known BST in a language of your choice; figure out how fast it is; try to make it as fast as a reference implementation. Try to find a semi-realistic application where your implementation is faster than a competitor. (For example, splay trees probably outperform red-black trees in cases with serious temporal locality.) This project is definitely possible.
+Here are the main slightly obscure BST implementations (from Wikipedia):</p>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/2-3_tree">2-3 tree</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/AA_tree">AA tree</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Scapegoat_tree">Scapegoat tree</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Splay_tree">Splay tree</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Treap">Treap</a></li>
+</ul>
+
+<p>(I feel like skip lists belong on that list too.)</p>
+
+<p><strong>Edit: as it happens, the course in question already teaches 2-3 trees, so they’re slightly less exciting to learn about seperately.</strong></p>
+
+<h2 id="optimal-treap-priority-changing-parameters">Optimal treap priority-changing parameters</h2>
+
+<p>Treaps are a great randomized data structure: they’re an unholy fusion of BST and heap, involving randomly choosing the priority for nodes. There’s a reasonably obvious set of parameters that they contain that you could try to optimize in different settings. As <a href="https://en.wikipedia.org/wiki/Treap">described on Wikipedia</a>:</p>
+
+<blockquote>
+  <p>“Aragon and Seidel also suggest assigning higher priorities to frequently accessed nodes, for instance by a process that, on each access, chooses a random number and replaces the priority of the node with that number if it is higher than the previous priority. This modification would cause the tree to lose its random shape; instead, frequently accessed nodes would be more likely to be near the root of the tree, causing searches for them to be faster.”</p>
+</blockquote>
+
+<p>This one is fun because there’s a chance of making an original and somewhat useful discovery. It’s also definitely doable. It’s reasonably likely that the answer ends up being the null hypothesis (“you are better off never changing the priority of the node”), but it’s probably fun either way.</p>
+
+<h2 id="implement-bucktrees-you-dont-actually-have-to-call-them-that">Implement BuckTrees (you don’t actually have to call them that)</h2>
+
+<p>I had a neat idea for a somewhat original data structure related to BSTs, but my implementation is wrong and it has a logical error (if you insert in descending order, it gets arbitrarily unbalanced). <a href="https://github.com/bshlgrs/random-balanced-trees">Here’s the repo</a> describing it. You could read my description of the data structure, figure out a way to fix the problem with it, and fix it, then implement it and benchmark it. This project is certainly possible, but might be too easy.</p>
+
+<p><strong>Edit: This is already a question in the CS166 assignment 3, so you probably can’t do it.</strong></p>
+
+<h2 id="reduction-memoizing-bsts">Reduction-memoizing BSTs</h2>
+
+<p>These are binary search trees where each node memoizes a function of its subtrees. For example, you could have a BST of humans, ordered by age, and have each node store the maximum income of the humans stored in its children. This is neat because then you can then answer queries like “what’s the maximum income of people with ages between 20.3 and 25.3” in log time. You can also update in log time. This is related to finger trees. This structure is not very hard to implement–it’s just a self-balancing BST with some extra book-keeping. For bonus points, implement it in C but with bindings to a nice language like Ruby, and a convenient API which lets me specify both my ordering function and my sub-tree memoizing function as lambda functions.</p>
+
+<p><strong>Edit: These are nicely described in <a href="http://web.stanford.edu/class/cs166/lectures/06/Small06.pdf">this fantastic set of slides</a> from the class which inspired me to write this post.</strong></p>
+
+<h2 id="self-balancing-kd-trees">Self-balancing KD trees</h2>
+
+<p>KD trees are a kind of data structure for representing spatial data. This is a research project as much as an implementation project. I believe this is possible but can’t find a full description of it anywhere. If you implement this and test it well, people would maybe use it.</p>
+
+<h2 id="investigate-building-fast-data-structures-in-non-c-systems-languages">Investigate building fast data structures in non-C systems languages</h2>
+
+<p>When people want to make their Ruby/Python programs fast, they often implement the key data structures in C/C++ and then make binding code to call them from their high level language. This is annoying because C/C++ are really annoying and error prone to code in. There are more modern languages which you could use for this, but no-one has really done that very much. I think it would be cool to choose some data structure, implement it in a more modern low level language (eg Go or Rust), then create the bindings to your high level language.</p>
+
+<p>This project is probably doable, but much of the effort in this project is probably figuring out how to get the bindings to work nicely. This is a problem because your lecturer might not be that interested in that work, so you might not get credit for it. Also, figuring out how to make bindings work sounds like a pretty annoying and potentially very difficult task. I really don’t know.</p>
+
+<p>The valuable output of this project would be a very clear online tutorial of how you build data structures in Go and call them from Ruby (for example). Ideally this tutorial would be accompanied by several examples of how to do it. You also have to learn Go or Rust for this project.</p>
+
+<p>If you made this work, this would be awesome. Best case scenario, you make it easy for people to do this in future, and then you get to take credit for a shift in how people write performance-critical data structures.</p>
+
+<h2 id="help-me-with-my-automatic-data-structures-project">Help me with my automatic data structures project!</h2>
+
+<p>I have this ongoing project to make software to automatically choose fast data structures to support a given API. I talked about an old version at a Scala conference last year (<a href="https://www.youtube.com/watch?v=oPFga7eg3Uw">video</a>). I am currently working on a new version, in Ruby. I think that this might be a really cool project if it works; talk to me if you’re interested on building some of it out for me.</p>
+
+<hr />
+
+<p>I think all of these would be great fun; please talk to me if you want any more advice or clarification or further ideas!</p>
+
+  </section>
+</div>
+
+
+
+  </body>
+
+<script>
+if (window.location.hostname == "dfilan.github.io") {
+  window.location.hostname = "shlegeris.com";
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52980069-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</html>
+

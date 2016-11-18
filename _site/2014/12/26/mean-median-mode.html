@@ -6,16 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Bets</title>
-  <meta name="description" content="Website of Daniel Filan.
-">
+  <title>Mean, median, mode</title>
+  <meta name="description" content="Probably four years ago, a friend told me that he wanted to find nice axioms for averages like the ones you learn in high school–mean, median, and mode.">
 
 
   <link rel="stylesheet" href="/stylesheets/styles.css">
   <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <link rel="canonical" href="http://danielfilan.com//bets.html">
+  <link rel="canonical" href="http://danielfilan.com//2014/12/26/mean-median-mode.html">
   <link rel="alternate" type="application/rss+xml" title="Daniel Filan" href="http://danielfilan.com//feed.xml">
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -53,11 +52,20 @@
 
 
   <section>
-    <h2>Bets</h2>
-    <p>this is markdown!</p>
+    <h2>Mean, median, mode</h2>
+    <p>Probably four years ago, a friend told me that he wanted to find nice axioms for averages like the ones you learn in high school–mean, median, and mode.</p>
 
-<p>this is <script type="math/tex">\LaTeX</script></p>
+<p>I said that I didn’t think there was a nice, natural way of relating all three of those concepts. Yesterday I realised I was wrong. Forgive me if this is totally obvious to people who know statistics, but it certainly wasn’t obvious to me.</p>
 
+<p>We want to put our average in the middle of a set. One way of doing this is to say that the average is the point which minimises its total distance to all the other points in the set. Of course, to do this we need a distance function.</p>
+
+<p>If we use the distance function <script type="math/tex">d(x,y) = abs(x-y)</script>, then the point which minimises the total distance is the median.</p>
+
+<p>If we use the distance function <script type="math/tex">d(x,y) = (x-y)^2</script>, then the point which minimises the total distance is the mean.</p>
+
+<p>And if we use the distance function where <script type="math/tex">d(x,y)</script> is 0 if x = y and 1 otherwise, the the point which minimises the total distance is the mode.</p>
+
+<p>For extra neatness points, we can write all of these as <script type="math/tex">d_n(x,y)= abs((x-y)^n)</script>, with mode, median, and mean being n = 0, 1, and 2, if we take <script type="math/tex">0^0 = 0</script>.</p>
 
   </section>
 </div>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>For Programmers, Giving a Talk at a Conference May Be Worth $100/hr in Career Capital</title>
+  <meta name="description" content="If you’re a good programmer, you can probably give a talk at a mediocre tech conference with as little as 20 hours of work. I think this is plausibly a good ...">
+
+
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+  <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="canonical" href="http://danielfilan.com//2016/02/01/tech_conferences.html">
+  <link rel="alternate" type="application/rss+xml" title="Daniel Filan" href="http://danielfilan.com//feed.xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$$', '$$'] ],
+        displayMath: [ ['$^$', '$^$']],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      messageStyle: "none",
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
+
+  <body>
+
+    
+
+    <div class="wrapper">
+  <header>
+  <h1><a href="/">Daniel Filan</a></h1>
+  <img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11659278_10202944584654914_2762452412152680044_n.jpg?oh=f017f593bd04d84d5de68bb00a736ddf&amp;oe=58486651">
+  <ul>
+    <li><a href="/pdfs/cv.pdf">CV</a></li>
+    <li><a href="mailto:df@danielfilan.com">email</a></li>
+    <li><a href="/daniel_filan_public_key.asc">PGP public key</a></li>
+    <li><a href="https://github.com/dfilan">github</a></li>
+    <li><a href="/posts">blog</a></li>
+  </ul>
+</header>
+
+
+  <section>
+    <h2>For Programmers, Giving a Talk at a Conference May Be Worth $100/hr in Career Capital</h2>
+    <p>If you’re a good programmer, you can probably give a talk at a mediocre tech conference with as little as 20 hours of work. I think this is plausibly a good use of your time.</p>
+
+<h2 id="my-story">My story</h2>
+
+<p>Last year, on a whim I submitted an abstract to Scala By The Bay. My abstract was about an open source project which I hadn’t actually started writing yet. At the time, I had about four months of experience as a full time software engineer. They accepted my talk. (They gave me a 20 minute slot because I asked for one; in retrospect I should have asked for more.)</p>
+
+<p>After recovering from the surprise of my abstract being accepted, I then spent 100+ hours writing the software that I eventually presented on, and 10+ hours practicing my presentation.</p>
+
+<p>I then went to the conference (which I attended for free as a speaker; my manager was happy to give me the time off work without me using up PTO, which I think is typical.) My presentation was fun to give, and I got a neat video of it:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oPFga7eg3Uw" frameborder="0" allowfullscreen=""></iframe>
+
+<p>After I did this presentation, I started getting way more recruiter spam for Scala jobs. More interestingly, a software book publishing company contacted me and asked if I was interested in writing a book for them. (It seemed like I’d end up making ballpark $25 an hour for writing the book, and I thought I could create career capital and income more effectively other ways, so I didn’t end up doing it. But it was nice that they asked.)</p>
+
+<p>I didn’t get that much value from networking with the people I met at the conference; a bunch of people tried to get me to apply to their companies/startups, but I could have found most of those jobs anyway on the internet.</p>
+
+<p>However, I’ve gotten a shit ton of value out of putting this project on my resume, and talking about it to potential employers. I think it’s plausible that this presentation increased my annual salary by $10k. If I did 100 hours of work for $10k annual salary boost that only lasted for a year, that’s $100 per hour, which is a pretty nice wage. (I also got other advantages out of doing this project, like becoming much more knowledgeable about data structures, and getting experience designing pretty complex and abstract software. I don’t know how much benefit I got from the actual learning vs the looking smarter.)</p>
+
+<h2 id="how-to">How to</h2>
+
+<p>Suppose that you wanted to get this kind of advantage without putting in that much work, and without having particular inspiration for a project. How do you do it? Here are some ideas for talks that you can do without even doing any programming:</p>
+
+<ul>
+  <li>
+    <p>Talk about something you’ve done at work. “How we used functional programming constructs to make hardened, well tested production code” is a totally passable talk.</p>
+  </li>
+  <li>
+    <p>Give an introduction to a technical topic. Offer to explain technical details of eg efficiency considerations and best practices with Rails view rendering. (If they accept you, you can then probably learn enough about the topic to interest your audience.)</p>
+  </li>
+  <li>
+    <p>Look up the hot new libraries in your programming language of choice; give a presentation about the basics of that library. As an example, John Backus’s <a href="https://blog.blockscore.com/how-to-write-better-code-using-mutation-testing/">blog post about mutation testing</a> is just begging to be adapted into a conference presentation. You can find other blog posts to plagiarize on Hacker News.</p>
+  </li>
+</ul>
+
+<p>Got slightly more time and want to present on your hot open source project? I have the best sense of the Scala landscape, so I’ll be talking only about that here. Here are some ideas I have for projects which I bet I could get into a Scala conference with. I will probably present something like this at a conference this year.</p>
+
+<p>There’s a bunch of hype about <a href="http://www.scala-js.org/">Scala.js</a>, which means easy conference presentations about it. These ideas look like some of the low hanging fruit to me. Easiest project: make Scala.js work with Meteor by writing the type shims for it, present on that. Alternative ideas: Implement a shitty prototype of something like Meteor in Scala. Implement a framework which can compile either to JS React apps or native Android apps: this just involves coming up with a UI DSL then writing functions which export from that to Android or Javascript, which involves me learning Android, which is like 10 hours of learning (less if I convince a friend to help me with it).</p>
+
+<p>If you want to steal any of these ideas and present on them at a conference, please be my guest (but if you talk to me about it I can give you more advice, and I’d appreciate knowing about my influence <img class="emoji" title=":smile:" alt=":smile:" src="https://assets.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20" align="absmiddle"> ).</p>
+
+<p>If you want to talk to me about doing tech conferences, I’m happy to try and share advice with you.</p>
+
+
+  </section>
+</div>
+
+
+
+  </body>
+
+<script>
+if (window.location.hostname == "dfilan.github.io") {
+  window.location.hostname = "shlegeris.com";
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52980069-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</html>

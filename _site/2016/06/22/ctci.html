@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Studying for startup interviews with &#39;Cracking the Coding Interview&#39;</title>
+  <meta name="description" content="Cracking the Coding Interview is by far the most popular interview prep book for software engineers. It’s a great book. But it was written for a few years ag...">
+
+
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+  <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="canonical" href="http://danielfilan.com//2016/06/22/ctci.html">
+  <link rel="alternate" type="application/rss+xml" title="Daniel Filan" href="http://danielfilan.com//feed.xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$$', '$$'] ],
+        displayMath: [ ['$^$', '$^$']],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      messageStyle: "none",
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+    });
+  </script>
+  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+
+  <body>
+
+    
+
+    <div class="wrapper">
+  <header>
+  <h1><a href="/">Daniel Filan</a></h1>
+  <img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11659278_10202944584654914_2762452412152680044_n.jpg?oh=f017f593bd04d84d5de68bb00a736ddf&oe=58486651"/>
+  <ul>
+    <li><a href="/pdfs/cv.pdf">CV</a></li>
+    <li><a href="mailto:df@danielfilan.com">email</a></li>
+    <li><a href="/daniel_filan_public_key.asc">PGP public key</li>
+    <li><a href="https://github.com/dfilan">github</a></li>
+    <li><a href="/posts">blog</a></li>
+  </ul>
+</header>
+
+
+  <section>
+    <h2>Studying for startup interviews with 'Cracking the Coding Interview'</h2>
+    <p><a href="https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X">Cracking the Coding Interview</a> is by far the most popular interview prep book for software engineers. It’s a great book. But it was written for a few years ago, and software engineering interviews seem to have changed in the meantime, at least in the Silicon Valley engineering culture which I’m most involved in.</p>
+
+<p>So I’ve written this guide to the book. It contains notes on things which I think have changed since it was written, and a list of the questions from the book which I think are most relevant to people preparing for software engineering interviews at good companies in the Bay Area.</p>
+
+<p>I was inspired to write this by <a href="https://www.interviewcake.com/">InterviewCake</a>, which is a competitor to Cracking the Coding Interview. But InterviewCake is much more expensive than CtCI. I think this list of CtCI questions is about as good a list of interview questions as InterviewCake. There, I just saved you $180.</p>
+
+<p>How have things changed? Most obviously, people use more scripting languages here and less C++ and Java. This has some direct effects. For example, there aren’t as many questions about merging arrays given buffer space anymore: that question still makes sense in scripting languages, but it doesn’t come up as much as it does in C. And I think Silicon Valley dislikes what it sees as verbose enterprise trivia bullshit, and purposefully doesn’t talk about such things. I think this is why I don’t hear about people being asked about design patterns.</p>
+
+<p>The 5th edition is somewhat better than the 4th edition, because it has more content at the start of every chapter. I have not seen the 6th edition.</p>
+
+<h2 id="the-most-relevant-questions">The most relevant questions</h2>
+
+<p>Here is a subset of the questions which I think reflects SF software interviews more accurately:</p>
+
+<p>Questions in the 4th edition:</p>
+
+<p>1.1, 1.7, 1.8, 2.1, 3.1, 3.2, 3.3, 3.5, 4.1, 4.2, 4.3, 4.5, 4.8, 7.1, 7.2, 7.4, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 8.7, 8.8, 9.2, 9.3, 9.6, 12.1, 12.2, 12.6, 12.7, 15.3, 17.5, 18.1, 18.2, 19.2, 19.7, 19.11, 20.10, 20.11.</p>
+
+<p>Questions in the 5th edition:</p>
+
+<p>1.1, 1.7, 1.8, 2.1, 3.1, 3.2, 3.3, 3.5, 3.7, 4.1, 4.2, 4.3, 4.5, 4.6, 4.8, 5.1, 8.1, 8.2, 8.5, 8.7, 8.9, 8.10, 9.1, 9.2, 9.3, 9.4, 9.5, 10.1, 10.2, 10.5, 10.6, 11.3, 11.6, 11.8, 15.5, 16.1, 17.2, 17.8, 17.12, 18.10, 18.11.</p>
+
+<p>(Making those two lists felt like maintaining a codebase to work in both Python 2 and 3)</p>
+
+<p>I would recommend giving these questions higher priority in your study.</p>
+
+<p>Many of the questions that I didn’t include there are still good practice. If you want more practise on a particular topic, you should definitely do even the questions I didn’t include.</p>
+
+<h2 id="general-notes">General notes</h2>
+
+<p>Every chapter in the interview questions section of CtCI starts with a short summary of the subject matter for the questions. I think these notes are quite good. It’s well worth reading the notes for chapters even if you don’t do questions from them.</p>
+
+<p>The first 40-ish pages of the book are general advice about software engineering interviews. I agree with all of it except the following points, organized by section:</p>
+
+<p><strong>Before the interview</strong>: Companies don’t ask behavioral questions much.</p>
+
+<p><strong>What You Need To Know (page 26)</strong>: Tries are not absolutely must-have knowledge. I’ve never heard of people being asked to implement quicksort in place. Singleton and Factory design patterns are not crucial knowledge.</p>
+
+<p><strong>At the Interview</strong>: You don’t have to use C, C++, or Java. People will possibly be biased against you if you do. Ruby, Python, and Javascript are fine choices. I think it’s fine to do the problem in whatever language you want. You can ask your recruiter about this before the interview.</p>
+
+<h2 id="comments-on-individual-question-chapters-in-the-4th-edition">Comments on individual question chapters (in the 4th edition):</h2>
+
+<h3 id="chapter-1-arrays-and-strings">Chapter 1: Arrays and Strings</h3>
+
+<p>Companies care less about seeing you edit data in place than they used to. I’d only expect questions on this if you’re applying for a C job. For this reason, questions [1.2, 1.3, 1.5, 1.6, 1.7] are lower priority.</p>
+
+<h3 id="chapter-2-linked-lists">Chapter 2: Linked Lists</h3>
+
+<p>All of these questions are less common these days because linked lists come up less, because we don’t use C as much and have more support for generics, leading to us coding our own data structures less often.</p>
+
+<p><a href="http://shlegeris.com/2016/04/22/dumbest-algorithm-problem.html">Fuck question 2.2.</a></p>
+
+<p>2.5 is a common bullshit brainteaser question.</p>
+
+<h3 id="chapter-3-queues-and-stacks">Chapter 3: Queues and stacks</h3>
+
+<p>I agree that you’ll look good if you can flawlessly implement a queue and stack.</p>
+
+<h3 id="chapter-4-graphs-and-trees">Chapter 4: Graphs and trees</h3>
+
+<p>Study BFS: it’s a really common question. These questions all seem reasonable.</p>
+
+<h3 id="chapter-5-bit-manipulation">Chapter 5: Bit manipulation</h3>
+
+<p>I’ve rarely seen these problems come up, even when I interviewed for a C++ systems job.</p>
+
+<p>I include one question of this type in my list above.</p>
+
+<h3 id="chapter-6-brainteasers">Chapter 6: Brainteasers</h3>
+
+<p>These questions are widely reviled, and seem to be getting less common. Maybe memorize the answers in case you run across a bad interviewer.</p>
+
+<h3 id="chapter-7-oop">Chapter 7: OOP</h3>
+
+<p>These questions are good. The provided answers are idiomatic Java; if you’re answering in Python you should model your answers after idiomatic Python rather than the answers given.</p>
+
+<p>I don’t hear about people being asked abstract questions like 7.3.</p>
+
+<h3 id="chapter-8-recursion">Chapter 8: Recursion</h3>
+
+<p>Many of these questions are classics which I’ve been asked many times before.</p>
+
+<h3 id="chapter-9-searching-and-sorting">Chapter 9: Searching and sorting</h3>
+
+<p>I think that it’s somewhat less common to be asked to write sorting algorithms these days.</p>
+
+<h3 id="chapter-10-math">Chapter 10: Math</h3>
+
+<p>I don’t hear about math questions being asked, except at extremely math heavy companies to applicants with a hardcore math background.</p>
+
+<h3 id="chapter-11-testing">Chapter 11: Testing</h3>
+
+<p>I don’t hear about these questions very much. I’ve never heard questions like “how would you test a pen”.</p>
+
+<h3 id="chapter-12-system-design-and-memory-limits">Chapter 12: System design and memory limits</h3>
+
+<p>I don’t hear about memory limit questions very often.</p>
+
+<h3 id="chapter-13-and-14-c-and-java">Chapter 13 and 14: C++ and Java</h3>
+
+<p>Only relevant if you’re interviewing in C++ or Java, and even then I’d be slightly surprised to get these questions–they seem somewhat like trivia to me. That said, I’ve been asked one of these questions before.</p>
+
+<h3 id="chapter-15-databases">Chapter 15: Databases</h3>
+
+<p>The advice given is somewhat out of date. I don’t think that I’ve ever heard about someone being asked to denormalize their SQL database schema for speed in an interview.</p>
+
+<p>I think the “design a database to hold certain data” type questions are more common now. The rise of ORMs has led to SQL being somewhat less important for most developers.</p>
+
+<h3 id="chapter-16-low-level">Chapter 16: Low level</h3>
+
+<p>These questions are great, but I wouldn’t expect them at most generalist job interviews.</p>
+
+<h3 id="chapter-17-networking">Chapter 17: Networking</h3>
+
+<p>This is somewhat more low level than I think most people get asked. It’s worth knowing the answer to the famous “what happens after you type a URL into a browser” question though.</p>
+
+<h3 id="chapter-18-threads-and-locks">Chapter 18: Threads and Locks</h3>
+
+<p>Companies don’t seem to ask about concurrency primitives without warning you beforehand. Some of these questions are Java-specific.</p>
+
+<h3 id="chapter-19-and-20-moderate-and-hard">Chapter 19 and 20: Moderate and Hard</h3>
+
+<p>All these questions are popular questions. I don’t particularly like them.</p>
+
+  </section>
+</div>
+
+
+
+  </body>
+
+<script>
+if (window.location.hostname == "dfilan.github.io") {
+  window.location.hostname = "shlegeris.com";
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52980069-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</html>
+

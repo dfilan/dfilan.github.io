@@ -6,16 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Bets</title>
-  <meta name="description" content="Website of Daniel Filan.
-">
+  <title>Universal basic incomes disincentivise work</title>
+  <meta name="description" content="epistemic status: pedantic point about math which probably isn’t too relevant to most real life questions">
 
 
   <link rel="stylesheet" href="/stylesheets/styles.css">
   <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <link rel="canonical" href="http://danielfilan.com//bets.html">
+  <link rel="canonical" href="http://danielfilan.com//2016/10/02/ubi.html">
   <link rel="alternate" type="application/rss+xml" title="Daniel Filan" href="http://danielfilan.com//feed.xml">
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -53,11 +52,33 @@
 
 
   <section>
-    <h2>Bets</h2>
-    <p>this is markdown!</p>
+    <h2>Universal basic incomes disincentivise work</h2>
+    <p><strong>epistemic status: pedantic point about math which probably isn’t too relevant to most real life questions</strong></p>
 
-<p>this is <script type="math/tex">\LaTeX</script></p>
+<p>Sometimes people say that a universal basic income would be good, because unlike the current welfare system which phases out benefits as your income increases, imposing an effective high marginal tax rate, the UBI stays constant as your income rises. As a result, these people claim, the UBI does not disincentivise work.</p>
 
+<p>This is false. Increasing the UBI means that your <script type="math/tex">n</script>th hour of work has lower utility than it would have had otherwise, because of diminishing marginal returns. So the UBI discourages work.</p>
+
+<p>–</p>
+
+<p>Just for fun, here’s what the math looks like for this.</p>
+
+<p>Suppose a worker’s utility function is</p>
+
+<p>$^$\text{utility} = \log(\text{wage} \cdot \text{tax rate} \cdot \text{hours worked} + \text{UBI}) - \text{hours worked}$^$</p>
+
+<p>Let the wage be <script type="math/tex">w</script>, tax rate <script type="math/tex">1 - r</script>, hours worked <script type="math/tex">h</script>, UBI <script type="math/tex">c</script>. Assume flat tax for simplicity. So <script type="math/tex">U = \log(w \cdot h \cdot r + c) - h</script>. The optimal amount of work happens when <script type="math/tex">\frac{dU}{dh}</script> is zero.</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+  0 &= \frac{dU}{dh} \\
+    &= \frac{r \cdot w}{c + h \cdot r \cdot w} - 1 \\
+  r \cdot w &= c + h \cdot r \cdot w \\
+  r \cdot w - c &= h \cdot r \cdot w \\
+  h &= \frac{r \cdot w - c}{r \cdot w}
+\end{align} %]]></script>
+
+<p>So increasing the UBI decreases hours worked, and the effect is stronger if your wage is lower.</p>
 
   </section>
 </div>

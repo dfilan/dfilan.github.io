@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A mistake in the Cato institute report on risks from refugees</title>
+  <meta name="description" content="I was reading a Vox article about the risks of Americans being killed by terrorists refugees. It linked to “Terrorism and Immigration”, a report by the Cato ...">
+
+
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+  <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="canonical" href="http://danielfilan.com//2016/09/24/cato.html">
+  <link rel="alternate" type="application/rss+xml" title="Daniel Filan" href="http://danielfilan.com//feed.xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$$', '$$'] ],
+        displayMath: [ ['$^$', '$^$']],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      messageStyle: "none",
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+    });
+  </script>
+  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+
+  <body>
+
+    
+
+    <div class="wrapper">
+  <header>
+  <h1><a href="/">Daniel Filan</a></h1>
+  <img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11659278_10202944584654914_2762452412152680044_n.jpg?oh=f017f593bd04d84d5de68bb00a736ddf&oe=58486651"/>
+  <ul>
+    <li><a href="/pdfs/cv.pdf">CV</a></li>
+    <li><a href="mailto:df@danielfilan.com">email</a></li>
+    <li><a href="/daniel_filan_public_key.asc">PGP public key</li>
+    <li><a href="https://github.com/dfilan">github</a></li>
+    <li><a href="/posts">blog</a></li>
+  </ul>
+</header>
+
+
+  <section>
+    <h2>A mistake in the Cato institute report on risks from refugees</h2>
+    <p>I was reading a <a href="http://www.vox.com/2016/9/20/12986886/donald-trump-jr-terrorist-skittles-wrong">Vox article</a> about the risks of Americans being killed by terrorists refugees. It linked to <a href="http://object.cato.org/sites/cato.org/files/pubs/pdf/pa798_1_1.pdf">“Terrorism and Immigration”</a>, a report by the Cato Institute.</p>
+
+<p>Here’s a graph from that report:</p>
+
+<p><img src="/img/cato_graph.png" alt="Graph of murder rates over time" /></p>
+
+<p>This purports to show the US murder rate over time, both including and excluding deaths from foreign-born terrorism. Unsurprisingly, foreign-born terrorism had a measurable impact in 2001 and in no other years.</p>
+
+<p>But something else caught my eye about this graph–the downward jump in 2001 in murder excluding foreign-born terrorism. The jump is abrupt and lasts one year and almost exactly cancels out the effect of the 9/11 attacks. According to the legend of the graph, the murder rate excluding foreign-born terrorism comes from author calculation.</p>
+
+<p>What happened here? Maybe Americans decided to kill each other a lot less after 9/11, in a short-lived burst of patriotism? Maybe they got scared of flying and <a href="http://www.americanscientist.org/issues/pub/flying-and-driving-after-the-september-11-attacks">drove their cars more</a>, which consumed enough of their free time that they were too busy to go on their usual murderous rampages?</p>
+
+<p>Or maybe the author totally fucked up and subtracted the 9/11 casualties from a statistical source which wasn’t including terrorism deaths in the first place, and then didn’t notice the obviously weird blip in their resulting data! Anyone want to take bets on which it was?</p>
+
+<p>Well, the author says they got their crime data from <a href="http://www.disastercenter.com/crime/uscrime.htm">Disaster Center</a>. Disaster Center gets their data from the FBI’s UCS Annual Crime Reports. According to <a href="https://ucr.fbi.gov/crime-in-the-u.s/2001/01sec5.pdf">Section 5 of the 2001 UCS report</a>:</p>
+
+<blockquote>
+  <p>The statistics of September 11 are not a part of the traditional Crime in the United States publication because they are different from the day-to-day crimes committed in this country.</p>
+</blockquote>
+
+<p>Oh dear!</p>
+
+<p>I emailed the author of the report, <a href="http://www.cato.org/people/alex-nowrasteh">Alex Nowrasteh</a>; he agrees that this is a mistake.</p>
+
+  </section>
+</div>
+
+
+
+  </body>
+
+<script>
+if (window.location.hostname == "dfilan.github.io") {
+  window.location.hostname = "shlegeris.com";
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52980069-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</html>
+

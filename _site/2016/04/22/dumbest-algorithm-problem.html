@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The dumbest algorithm problem in the entire world</title>
+  <meta name="description" content="Want to know the dumbest algorithm problem in the entire world? Here it is:">
+
+
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+  <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <link rel="canonical" href="http://danielfilan.com//2016/04/22/dumbest-algorithm-problem.html">
+  <link rel="alternate" type="application/rss+xml" title="Daniel Filan" href="http://danielfilan.com//feed.xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$$', '$$'] ],
+        displayMath: [ ['$^$', '$^$']],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      messageStyle: "none",
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+    });
+  </script>
+  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+
+  <body>
+
+    
+
+    <div class="wrapper">
+  <header>
+  <h1><a href="/">Daniel Filan</a></h1>
+  <img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/11659278_10202944584654914_2762452412152680044_n.jpg?oh=f017f593bd04d84d5de68bb00a736ddf&oe=58486651"/>
+  <ul>
+    <li><a href="/pdfs/cv.pdf">CV</a></li>
+    <li><a href="mailto:df@danielfilan.com">email</a></li>
+    <li><a href="/daniel_filan_public_key.asc">PGP public key</li>
+    <li><a href="https://github.com/dfilan">github</a></li>
+    <li><a href="/posts">blog</a></li>
+  </ul>
+</header>
+
+
+  <section>
+    <h2>The dumbest algorithm problem in the entire world</h2>
+    <p>Want to know the dumbest algorithm problem in the entire world? Here it is:</p>
+
+<blockquote>
+  <p>Find the <script type="math/tex">k</script>th last element of a linked list, in a single pass, with constant memory.</p>
+</blockquote>
+
+<p>Let the length of the linked list be <script type="math/tex">n</script>. If we didn’t have to follow the single-pass constraint, we’d solve this by finding the length of the linked list (which takes <script type="math/tex">n</script> steps), then looking for the <script type="math/tex">(n - k)</script>th element. In total, we traversed <script type="math/tex">(2n - k)</script> links.</p>
+
+<p>However, this interviewer apparently measures code efficiency by “number of while loops in the function body”, so we have to do better.</p>
+
+<p>The canonical answer to this question is to make a while loop with two pointers, one of which trails <script type="math/tex">k</script> links behind the other. As soon as you get to the end with your leading pointer, you return whatever’s at your trailing pointer.</p>
+
+<p>Wow, so efficient, only one while loop! Let’s see how much faster we made it!</p>
+
+<p>Well, the leading pointer traversed <script type="math/tex">n</script> links, and the trailing pointer traversed <script type="math/tex">(n - k)</script> links. That’s…uh…exactly the same as the previous answer! Except you had to write a custom function instead of just calling <code class="highlighter-rouge">.length</code> and <code class="highlighter-rouge">.get</code>, which I assume your linked list already had! And now you’re more exposed to a bug when the linked list is too short to have a <script type="math/tex">k</script>th last element!</p>
+
+<p>(Full disclosure: for small <script type="math/tex">k</script>, this solution might be faster because of memory locality. But I’ve never heard anyone mention that as the rationale for this problem, so I’m not going to give any credit for that.)</p>
+
+<p>In real life, if this was method call was going to happen a lot you’d just store the length of your linked list in a wrapper object. Knowing that you should maintain the length as a field is a million times more useful than being able to solve the problem as written.</p>
+
+<p>It makes me really sad that this question appears so often on lists of most common interview questions. Cracking the Coding Interview mentions this question and gives this answer but doesn’t claim it’s better. Elements of Programming Interviews actively claims that this answer is the better one (page 105).</p>
+
+<p>This is algorithm interviewing at its worst. It’s a brainteaser which actively penalizes you for a good sense of algorithmics or software engineering.</p>
+
+<p>EDIT: In the comments, David gives a great solution that is way smarter than the traditional one. This makes me dislike the traditional answer even more.</p>
+
+<blockquote>
+  <p>Leading pointer is L steps ahead of trailing one. Remember where it is (say, OLD_LEAD). Move forward L more steps, while remembering how far ahead the leading one is of the trailing one (STEPS_AHEAD).</p>
+  <p>If you get to the end, do the right thing (using STEPS_AHEAD).</p>
+  <p>If STEPS_AHEAD gets to L, move trailing pointer to OLD_LEAD and update STEPS_AHEAD.</p>
+</blockquote>
+
+<hr />
+
+<p><a href="https://www.facebook.com/bshlgrs/posts/10207496299980380?pnref=story">view comments on Facebook</a></p>
+
+  </section>
+</div>
+
+
+
+  </body>
+
+<script>
+if (window.location.hostname == "dfilan.github.io") {
+  window.location.hostname = "shlegeris.com";
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52980069-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</html>
+
