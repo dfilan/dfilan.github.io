@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}           
+\geometry{letterpaper}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{pgfplots}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+
+\newcommand{\ts}[1]{\textsuperscript{#1}}
+\newcommand{\tS}[1]{\textsubscript{#1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\U}{\mathcal{U}}
+
+\title{Fun theorems}
+\author{}
+\date{}
+
+\begin{document}
+\bibliographystyle{alpha}
+\maketitle
+
+\vspace{-6ex}
+
+\begin{itemize}
+\item In Fr\'{e}chet (T\tS{1}) spaces, points are closed, and every subset is the intersection of all open sets containing that subset.
+\item All spaces are the quotient of some Hausdorff space.
+\item Compact sets are closed in Hausdorff spaces.
+\item If $f, g: X \rightarrow Y$ are continuous functions and $Y$ is Hausdorff, then their equaliser is closed in $X$.
+\item Continuous functions into Hausdorff spaces are determined by their values on dense subsets.
+\item Completely regular spaces have their topology determined by their set of continuous functions to $\R$.
+\item Tychonoff spaces are exactly those spaces which can be embedded in compact Hausdorff spaces.
+\item Every space $X$ is a subspace of some separable space with the same cardinality as $X$.
+\item Continuous functions from separable spaces to Hausdorff spaces are determined by countably many values.
+\item Separable metric spaces can be embedded in the Hilbert cube.
+\item $X$ is sequential iff for all spaces $Y$ and functions $f: X \rightarrow Y$, $f$ is continuous iff for all sequences $(x_n)$ and points $x$, $x_n \rightarrow x \Rightarrow f(x_n) \rightarrow f(x)$.
+\item The topology of second-countable spaces has cardinality less than or equal to that of the real line.
+\item Continuous images of compact spaces are compact.
+\item Any product of compact spaces is compact.
+\item Continuous images of (\{\}/path-/hyper-) connected spaces are (\{\}/path-/hyper-) connected.
+\item Every Hausdorff second-countable regular space is metrisable.
+\item For metrisable spaces, second-countability, separability, and Lindel\"{o}fness are equivalent, as are compactness, sequential compactness, countable compactness, and limit point compactness.
+\item For first-countable spaces, sequential compactness and countable compactness are equivalent. 
+\item For Lindel\"{o}f spaces, compactness and countable compactness are equivalent.
+\end{itemize}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
