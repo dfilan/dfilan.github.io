@@ -1,4 +1,8 @@
-# Mechanistic Transparency for Machine Learning
+---
+layout: post
+title:  "Mechanistic Transparency for Machine Learning"
+date: 2018-07-10
+---
 
 Cross-posted to the [Alignment Forum](https://www.alignmentforum.org/posts/3kwR2dufdJyJamHQq/mechanistic-transparency-for-machine-learning).
 
