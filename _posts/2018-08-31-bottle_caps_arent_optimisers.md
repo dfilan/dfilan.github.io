@@ -4,7 +4,7 @@ title:  "Bottle Caps Aren't Optimisers"
 date: 2018-08-31
 ---
 
-Cross-posted to the [Alignment Forum](https://tbd.com).
+_Cross-posted to the [Alignment Forum](https://www.alignmentforum.org/posts/26eupx3Byc8swRS7f/bottle-caps-aren-t-optimisers)._
 
 One thing I worry about sometimes is people writing code with optimisers in it, without realising that that's what they were doing. An example of this: suppose you were doing deep reinforcement learning, doing optimisation to select a controller (that is, a neural network that takes a percept and returns an action) that generated high reward in some environment. Alas, unknown to you, this controller actually did optimisation itself to select actions that score well according to some metric that so far has been closely related to your reward function. In such a scenario, I'd be wary about your deploying that controller, since the controller itself is doing optimisation which might steer the world into a weird and unwelcome place.
 
