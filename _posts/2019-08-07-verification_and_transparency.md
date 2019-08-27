@@ -33,3 +33,13 @@ Verification systems typically work by having a user specify a proposition to be
 Thinking about this made me realise that many sorts of things both serve verification and transparency purposes. Examples:
 - Type signatures in a strongly typed language can be seen as a method of ensuring that the compiler proves that certain errors cannot occur, while also giving a human reading the program a better sense of what various functions do.
 - A mathematics textbook containing a large numbers of theorems, lemmas, and proofs is made by proving a large number of propositions, and allows a reader to gain an understanding of the relevant mathematical objects by perusing the theorems and lemmas, as well as by looking at the structure of the proofs.
+
+## Addendum (added 2019-08-26)
+
+LessWrong user justinpombrio wrote a comment to this post which included the line:
+
+> [Y]our examples only seem to support that transparency _enables_ verification. Is that closer to what you were trying to say?
+
+My response:
+
+> No, but you've picked up a weakness in my exposition (or rather something that I just forgot to say). Verification also enables transparency: by verifying a large number of properties of a system, one provides a 'view' for a user to understand the system, just as a transparency method can itself be thought of as verifying some properties of a system: for example, sharing the source code of a binary verifies that that source code compiles into the given binary, and that the binary when executed will use such and such memory (if the source code is written in a language that makes that explicit), etc. As such, one can think of both verification and transparency as providing artefacts that prove certain properties of systems, although they 'prove' these properties in somewhat different ways.
