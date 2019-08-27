@@ -6,7 +6,7 @@ date: 2019-02-06
 
 _Epistemic status: I've spent a while thinking about and collecting these test cases, and talked about them with other researchers, but couldn't bear to revise or ask for feedback after writing the first draft for this post, so here you are._
 
-Cross-posted to the [AI Alignment Forum](https://www.alignmentforum.org/posts/wzPzPmAsG3BwrBrwy/test-cases-for-impact-regularisation-methods).
+_Cross-posted to the [AI Alignment Forum](https://www.alignmentforum.org/posts/wzPzPmAsG3BwrBrwy/test-cases-for-impact-regularisation-methods)._
 
 A motivating concern in AI alignment is the prospect of an agent being given a utility function that has an [unforeseen maximum](https://arbital.com/p/unforeseen_maximum/) that involves large negative effects on parts of the world that the designer didn't specify or correctly treat in the utility function. One idea for mitigating this concern is to ensure that AI systems just don't change the world that much, and therefore don't negatively change bits of the world we care about that much. This has been called "[low impact AI](https://arxiv.org/pdf/1705.10720.pdf)", "[avoiding negative side effects](https://arxiv.org/pdf/1606.06565.pdf)", using a "[side effects measure](https://arxiv.org/pdf/1806.01186.pdf)", or using an "[impact measure](https://arbital.com/p/4l/)". Here, I will think about the task as one of designing an impact regularisation method, to emphasise that the method may not necessarily involve adding a penalty term representing an 'impact measure' to an objective function, but also to emphasise that these methods do act as a regulariser on the behaviour (and usually the objective) of a pre-defined system.
 

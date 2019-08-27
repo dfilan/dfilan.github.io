@@ -6,6 +6,8 @@ date: 2019-08-07
 
 _Epistemic status: I've thought about this topic in general for a while, and recently spent half an hour thinking about it in a somewhat focussed way._
 
+_Cross-posted to the [AI Alignment Forum](https://www.alignmentforum.org/posts/n3YRDJYCnQcDAw29G/verification-and-transparency)._
+
 Verification and transparency are two kinds of things you can do to or with a software system. Verification is where you use a program to prove whether or not a system of interest has a property of interest. Transparency is where you use tools to make it clear how the software system works. I claim that these are intimately related.
 
 ## Examples of verification

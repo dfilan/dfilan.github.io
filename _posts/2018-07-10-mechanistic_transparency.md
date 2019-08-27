@@ -4,7 +4,7 @@ title:  "Mechanistic Transparency for Machine Learning"
 date: 2018-07-10
 ---
 
-Cross-posted to the [Alignment Forum](https://www.alignmentforum.org/posts/3kwR2dufdJyJamHQq/mechanistic-transparency-for-machine-learning).
+_Cross-posted to the [AI Alignment Forum](https://www.alignmentforum.org/posts/3kwR2dufdJyJamHQq/mechanistic-transparency-for-machine-learning)._
 
 Lately I've been trying to come up with a thread of AI alignment research that (a) I can concretely see how it significantly contributes to actually building aligned AI and (b) seems like something that I could actually make progress on. After some thinking and narrowing down possibilities, I've come up with one -- basically, a particular angle on machine learning transparency research.
 

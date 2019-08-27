@@ -4,6 +4,8 @@ title:  "Insights from 'The Strategy of Conflict'"
 date: 2018-01-03
 ---
 
+_Cross-posted to [LessWrong](https://www.lesswrong.com/posts/2SeN2MjmMzZB25hBo/insights-from-the-strategy-of-conflict)._
+
 I recently read [Thomas Schelling](https://en.wikipedia.org/wiki/Thomas_Schelling)'s book 'The Strategy of Conflict'. Many of the ideas it contains are now pretty widely known, especially in the rationalist community, such as the value of Schelling points when coordination must be obtained without communication, or the value of being able to commit oneself to actions that seem irrational. However, there are a few ideas that I got from the book that I don't think are as embedded in the public consciousness.
 
 ### Schelling points in bargaining
