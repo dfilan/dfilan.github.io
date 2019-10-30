@@ -6,7 +6,7 @@ date:   2019-08-26
 
 _Cross-posted to [LessWrong](https://www.lesswrong.com/posts/3vATgmLp72mzNNpo4/a-personal-rationality-wishlist)._
 
-At one point I complied a list of conundrums relating to rationality that come up in my life. Instead of solving them, I thought I'd write up a selection of them, since that's easier and maybe other people will solve them.
+At one point I compiled a list of conundrums relating to rationality that come up in my life. Instead of solving them, I thought I'd write up a selection of them, since that's easier and maybe other people will solve them.
 
 ## Punishing honesty vs no punishment
 
