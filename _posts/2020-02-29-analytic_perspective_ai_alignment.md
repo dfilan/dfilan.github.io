@@ -4,7 +4,7 @@ title:  "An Analytic Perspective on AI Alignment"
 date:   2020-02-29
 ---
 
-_Cross-posted to the [AI Alignment Forum](not.really)._
+_Cross-posted to the [AI Alignment Forum](https://www.alignmentforum.org/posts/8GdPargak863xaebm/an-analytic-perspective-on-ai-alignment)._
 
 This is a perspective I have on how to do useful AI alignment research. Most perspectives I'm aware of are constructive: they have some blueprint for how to build an aligned AI system, and propose making it more concrete, making the concretisations more capable, and showing that it does in fact produce an aligned AI system. I do not have a constructive perspective - I'm not sure how to build an aligned AI system, and don't really have a favourite approach. Instead, I have an analytic perspective. I would like to understand AI systems that are built. I also want other people to understand them. I think that this understanding will hopefully act as a 'filter' that means that dangerous AI systems are not deployed. The following dot points lay out the perspective.
 
