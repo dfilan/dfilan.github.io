@@ -13,7 +13,7 @@ Since the remainder of this post is written as nested dot points, some readers m
 ## Background beliefs
 
 - I am imagining a future world in which powerful AGI systems are made of components roughly like neural networks (either feedforward or recurrent) that have a large number of parameters.
-- Futhermore, I'm imagining that the training process of these ML systems does not provide enough guarantees about deployment performance.
+- Furthermore, I'm imagining that the training process of these ML systems does not provide enough guarantees about deployment performance.
   - In particular, I'm supposing that systems are being trained based on their ability to deal with simulated situations, and that that's insufficient because deployment situations are hard to model and therefore simulate.
     - One reason that they are hard to model is the complexities of the real world.
 	  - The real world might be intrinsically difficult to model for the relevant system. For instance, it's difficult to simulate all the situations in which the CEO of Amazon might find themselves.
@@ -66,7 +66,7 @@ Since the remainder of this post is written as nested dot points, some readers m
 	- By 'performance-based definitions', I mean definitions that refer to facts that can be known about the system once it starts running.
 	- Subjective definitions are inadequate because they do not refer to easily-measurable quantities.
 	- Performance-based definitions are inadequate because they can only be evaluated once the system is running, when it could already pose a danger, violating the "zero-shot" desideratum.
-	- Structural definitions are required because they are precisely the definitions that are not subjective or performance-based that also only refer to facts that are easly accessible, and therefore are easy to evaluate whether a system satisfies the definition.
+	- Structural definitions are required because they are precisely the definitions that are not subjective or performance-based that also only refer to facts that are easily accessible, and therefore are easy to evaluate whether a system satisfies the definition.
     - As such, definitions like "an agent is a system whose behaviour can't usefully be predicted mechanically, but can be predicted by assuming it near-optimises some objective function" (which was proposed in [this paper](https://arxiv.org/abs/1805.12387)) are insufficient because they are both subjective and performance-based.
 	- It is possible to turn subjective definitions into structural definitions trivially, by asking a human about their beliefs and preferences. This is insufficient.
 	  - e.g. "X is a Y if you are scared of it" can turn to "X is a Y if the nearest human to X, when asked if they are scared of X, says 'yes'".
@@ -92,7 +92,7 @@ Since the remainder of this post is written as nested dot points, some readers m
 - An easier path to transparency than the "zero-shot" approach might be to start with simpler systems, observe their behaviour, and slowly scale them up. As you see problems, stop scaling up the systems, and instead fix them so the problems don't occur.
   - I disagree with this criticism.
     - At one point, it's going to be the first time you use a system of a given power in a domain, and the problems caused by the system might be discontinuous with its power, meaning that they would be hard to predict.
-      - Especially if the power of the system increases discontinously.
+      - Especially if the power of the system increases discontinuously.
       - It is plausibly the case that systems that are a bit 'smarter than humanity' are discontinuously more problematic than those that are a bit less 'smart than humanity'.
 - One could imagine giving up the RL dream for something like debate, where you really can get guarantees from the training procedure.
   - I think that this is not true, and that things like debate require transparency tools to work well, so as to let debaters know when other debaters are being deceitful. An argument for an analogous conclusion can be found in evhub's post on [Relaxed adversarial training for inner alignment](https://www.lesswrong.com/posts/9Dy5YRaoCxH9zuJqa/relaxed-adversarial-training-for-inner-alignment).
@@ -100,7 +100,7 @@ Since the remainder of this post is written as nested dot points, some readers m
   - But reasoning could look different in different environments.
 - This perspective relies on things continuing to look pretty similar to current ML.
   - This would be alleviated if you could come up with some sort of sensible theory for how to make systems transparent.
-  - I find it plausible that the devolpment of such a theory should start with people messing around and doing things with systems they have.
+  - I find it plausible that the development of such a theory should start with people messing around and doing things with systems they have.
 - Systems should be transparent to all relevant human stakeholders, not just developers.
   - Sounds right to me - I think people should work on this broader problem. But:
     - I don't know how to solve that problem without making them transparent to developers initially.
