@@ -93,7 +93,7 @@ Since the remainder of this post is written as nested dot points, some readers m
   - I disagree with this criticism.
     - At one point, it's going to be the first time you use a system of a given power in a domain, and the problems caused by the system might be discontinuous with its power, meaning that they would be hard to predict.
       - Especially if the power of the system increases discontinously.
-      - It is plausibly be the case that systems that are a bit 'smarter than humanity' are discontinuously more problematic than those that are a bit less 'smart than humanity'.
+      - It is plausibly the case that systems that are a bit 'smarter than humanity' are discontinuously more problematic than those that are a bit less 'smart than humanity'.
 - One could imagine giving up the RL dream for something like debate, where you really can get guarantees from the training procedure.
   - I think that this is not true, and that things like debate require transparency tools to work well, so as to let debaters know when other debaters are being deceitful. An argument for an analogous conclusion can be found in evhub's post on [Relaxed adversarial training for inner alignment](https://www.lesswrong.com/posts/9Dy5YRaoCxH9zuJqa/relaxed-adversarial-training-for-inner-alignment).
 - One could imagine inspecting training-time reasoning and convincing yourself that way that future reasoning will be OK.
