@@ -1,7 +1,5 @@
 <!doctype html>
 <html>
-
-  <!-- This isn't the file you want: go to index.html in the main directory. -->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -16,29 +14,19 @@
   </head>
   <body>
     <div class="wrapper">
-    <header>
-  <h1><a href="/">Daniel Filan</a></h1>
-  <img src="/selfie.jpg"/>
-  <ul>
-    <li><a href="/posts">blog</a></li>
-    <li><a href="mailto:df@danielfilan.com">email</a></li>
-    <li><a href="/daniel_filan_public_key.asc">PGP public key</li>
-    <li><a href="/pdfs/cv.pdf">CV</a></li>
-    <li><a href="https://github.com/dfilan">github</a></li>
-  </ul>
-</header>
-
-
+    {% include sidebar.html %}
 <section>
 
 <h2>
 <a id="about-me" class="anchor" href="#about-me" aria-hidden="true"><span class="octicon octicon-link"></span></a>About me</h2>
 
-<p>I'm currently a PhD student at UC Berkeley being supervised by <a href="https://people.eecs.berkeley.edu/~russell/">Stuart Russell</a>. I research mathematics relevant to ensuring that future artifical intelligences who may be much smarter than us behave in a safe way. Discussions of problems in this area are available <a href="https://intelligence.org/technical-agenda/">here</a>, <a href="https://intelligence.org/files/AlignmentMachineLearning.pdf">here</a>, and <a href="http://arxiv.org/abs/1606.06565">here</a>.</p>
+<p>I'm currently a PhD candidate at UC Berkeley being supervised by <a href="https://people.eecs.berkeley.edu/~russell/">Stuart Russell</a>. I do ML research relevant to ensuring that future artifical intelligences who may be much smarter than us behave in a safe way. Discussions of problems in this area are available <a href="https://intelligence.org/technical-agenda/">here</a>, <a href="https://intelligence.org/files/AlignmentMachineLearning.pdf">here</a>, and <a href="http://arxiv.org/abs/1606.06565">here</a>.</p>
+
+<p>I also have a <a href="https://axrp.net">podcast</a> about this field of research. It's called <a href="https://axrp.net">AXRP</a>, which is short for the AI X-risk Research Podcast. You can listen to episodes on <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9heHJwb2RjYXN0LmxpYnN5bi5jb20vcnNz">Google podcasts</a>, or by searching "AXRP" in your favourite podcast app. Alteratively, you can read transcripts <a href="https://axrp.net">here</a>.</p>
 
 <p>I did my undergrad at the Australian National University, studying the theory of reinforcement learning, mathematics, and theoretical physics. I did my honours year (similar to a research master's degree lasting one year) under <a href="http://www.hutter1.net/">Marcus Hutter</a>; you can read my thesis "Resource-bounded Complexity-based Priors for Agents" <a href="/pdfs/thesis.pdf">here</a>.</p>
 
-<p>I'm interested in <a href="http://whatiseffectivealtruism.com/">effective altruism</a>, how we can use our limited resources to do the most good in the world. I also sometimes <a href="/bets">bet on things</a>, for reasons described by <a href="http://econlog.econlib.org/archives/2012/05/the_bettors_oat.html">Bryan Caplan</a> and <a href="http://econlog.econlib.org/archives/2014/07/kant_on_betting.html">Immanuel Kant</a>.</p>
+<p>I'm interested in <a href="https://www.effectivealtruism.org/">effective altruism</a>, how we can use our limited resources to do the most good in the world. I also sometimes <a href="/bets">bet on things</a>, for reasons described by <a href="http://econlog.econlib.org/archives/2012/05/the_bettors_oat.html">Bryan Caplan</a> and <a href="http://econlog.econlib.org/archives/2014/07/kant_on_betting.html">Immanuel Kant</a>.</p>
 
 <h3>Publications</h3>
 
@@ -46,9 +34,17 @@
 
 <ul>
 
-
+<li><strong>Exploring Hierarchy-Aware Inverse Reinforcement Learning.</strong> <a href="https://arxiv.org/abs/1807.05037">arxiv</a><br>
+With Chris Cundy (lead author).<br>
+  Presented at GoalsRL 2018, held jointly at ICML, IJCAI, and AAMAS 2018.<br>
+Advocates for the use of hierarchical planning models of humans for use in inverse reinforcement learning as more realistic for complex tasks, showing that in one task they perform comparably to state-of-the-art models.</li>
   
-<li><strong>Self-Modification of Policy and Utility Function in Rational Agents.</strong> <a href="https://arxiv.org/abs/1605.03142">arxiv</a><br>
+  <li><strong>Modeling Agents with Probabilistic Programs.</strong> <a href="http://agentmodels.org">website</a><br>
+    With Owain Evans (lead author), Andreas Stuhlm&uuml;ller, and John Salvatier.<br>
+    Web book.<br>
+  A web book explaining how to write models of agents in the <a href="http://webppl.org/">webppl</a> probabilistic programming language. Covers topics such as "planning as inference", (PO)MDPs, inverse reinforcement learning, hyperbolic discounting, myopic planning, and multi-agent planning.</li>
+  
+<li><strong>Self-Modification of Policy and Utility Function in Rational Agents.</strong> <a href="http://arxiv.org/abs/1605.03142">arxiv</a><br>
 With Tom Everitt (lead author), Mayank Daswani, and Marcus Hutter.<br>
   Presented at AGI 2016, winner of the Kurzweil prize for best paper.<br>
 Discusses agents that can modify their source code and predict the result of these modifications, and how to define them so that they don't make modifications that stop them from optimising what we originally told them to optimise.</li>
@@ -69,4 +65,3 @@ My honours thesis about speed priors, used both in sequence prediction and in an
 </section>
   </body>
 </html>
-
