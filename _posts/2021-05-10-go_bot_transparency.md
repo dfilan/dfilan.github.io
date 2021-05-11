@@ -35,4 +35,4 @@ Related work:
 - The work on identifying the ‘[circuits](https://distill.pub/2020/circuits/)’ of [Inception v1](https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Szegedy_Going_Deeper_With_2015_CVPR_paper.html)
 - [The case for aligning narrowly superhuman models](https://www.lesswrong.com/posts/PZtsoaoSLpKjjbMqM/the-case-for-aligning-narrowly-superhuman-models)
 
-*A conversation with Nate Soares on a related topic probably helped inspire this post. Please don't blame him if it's dumb though.*
+*A conversation with Nate Soares on a related topic probably helped inspire this post. Please don't blame him if it's dumb tho.*
