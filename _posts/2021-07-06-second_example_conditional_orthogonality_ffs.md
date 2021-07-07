@@ -24,4 +24,5 @@ Hopefully this post was useful both in giving you a better sense of conditional 
 - $$A$$, the partition of points according to their value of $$a$$
 - $$E_B$$, the partition of points according to their value of $$b - a$$
 - $$E_C$$, the partition of points according to their value of $$c - a$$
+
 This would give exactly the same results as those in the main post!
