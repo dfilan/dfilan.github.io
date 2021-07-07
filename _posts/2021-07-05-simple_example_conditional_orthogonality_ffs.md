@@ -31,7 +31,7 @@ Hopefully this gives you some insight into condition 2 of the definition of cond
 In summary: $h(X_1 \mid E) = h(X_2 \mid E) = \{X_1, X_2, X_3\}$, and $h(X_4 \mid E) = \{X_4\}$. So, is $X_1$ orthogonal to $X_2$ given $E$? No, their conditional histories overlap - in fact, they're identical! Is $X_1$ orthogonal to $X_4$ given $E$? Yes, they have disjoint conditional histories.
 
 Some notes:
-- In this case, $X_1$ was already orthogonal to $X_4$ before conditioning. It would be nice to come up with an example where two things that weren't already orthogonal become so after conditioning.
+- In this case, $X_1$ was already orthogonal to $X_4$ before conditioning. It would be nice to come up with an example where two things that weren't already orthogonal become so after conditioning. [EDIT: see [my next post](https://www.alignmentforum.org/posts/GFGNwCwkffBevyXR2/a-second-example-of-conditional-orthogonality-in-finite)]
 - We didn't really need the underlying set to be finite for this example to work, suggesting that factored sets don't really need to be finite for all the machinery Scott discusses.
 - We did need the range of each variable to be bounded for this to work nicely. Because all the numbers need to be between -2 and 2, once you're in $E$, if $x_1 = 2$ then $x_2$ can't be bigger than 1, otherwise $x_3$ can't go negative enough to get the numbers to add up to 1. But if they could all be arbitrary real numbers, then even once you were in $E$, knowing $x_1$ wouldn't tell you anything about $x_2$, but we'd still have that $X_1$ wasn't orthogonal to $X_2$ given $E$, which would be weird.
 
