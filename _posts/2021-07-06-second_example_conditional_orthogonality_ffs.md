@@ -4,7 +4,7 @@ title: "A second example of conditional orthogonality in finite factored sets"
 date: 2021-07-06
 ---
 
-Reader's note: It looks like the math on my website is all messed up. To read it better, I suggest checking it out on the Alignment Forum.
+Reader's note: It looks like the math on my website is all messed up. To read it better, I suggest checking it out on the [Alignment Forum](https://www.alignmentforum.org/posts/GFGNwCwkffBevyXR2/a-second-example-of-conditional-orthogonality-in-finite).
 
 Yesterday, I wrote a [post](https://danielfilan.com/2021/07/05/simple_example_conditional_orthogonality_ffs.html) that gave an example of conditional non-orthogonality in [finite factored sets](https://www.alignmentforum.org/s/kxs3eeEti9ouwWFzr/p/N5Jm6Nj4HkNKySA5Z). I encourage you to read that post first. However, I'm kind of dissatisfied with it because it doesn't show any interesting cases of conditional orthogonality (despite the title seeming to promise that). So I'd like to show you one today.
 
