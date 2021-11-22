@@ -6,7 +6,7 @@ date:   2021-11-21
 
 _This post was inspired by the Raymond Smullyan book [The Riddle of Scheherazade](https://www.penguinrandomhouse.com/books/169727/the-riddle-of-scheherazade-by-raymond-smullyan/)._
 
-This post will be structured into three puzzles: first, a puzzle to warm up, then a meta-puzzle about the first puzzle. I strongly encourage you to give your best shot at the first puzzle---it is achievable, and the rest of the post will spoil the solution. I also encourage you to try the meta-puzzle before reading my solution.
+This post contains two puzzles: first, a puzzle to warm up, then a meta-puzzle about the first puzzle. I strongly encourage you to give your best shot at the first puzzle---it is achievable, and the rest of the post will spoil the solution. I also encourage you to try the meta-puzzle before reading my solution.
 
 ## The puzzle
 
