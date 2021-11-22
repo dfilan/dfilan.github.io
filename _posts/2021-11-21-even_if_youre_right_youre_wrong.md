@@ -4,7 +4,7 @@ title:  "Even if you're right, you're wrong"
 date:   2021-11-21
 ---
 
-_Epistemic status: an aggrieved depiction of something I find annoying._
+_Epistemic status: I noticed a commonality between a set of rhetorical moves that I sometimes find irritating and sometimes think is valid._
 
 You claim P? OK. But even if you're right about P...
 
