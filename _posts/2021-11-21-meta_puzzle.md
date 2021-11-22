@@ -72,7 +72,7 @@ While in Australia, you meet a stranger. You don't know who this stranger worshi
 
 ## Solution to the puzzle
 
-Take the sentence "I worship Satan, or I am single"---where "or" is used in the sense that both could be true. No Satanist could say such a sentence, because if a Satanist said it, it would be true. Therefore, the person who spoke it must have been God-fearing. Since the person is God-fearing, they do not worship Satan, so they must be single, since otherwise the sentence is false.
+Take the sentence "I worship Satan, or I am single"---where "or" is used in the sense that both could be true. No Satanist could say such a sentence, because if a Satanist said it, it would be true. Therefore, the person who spoke it must have been God-fearing. Since the person is God-fearing, they do not worship Satan, so they must be single, since otherwise the sentence would be false.
 
 ## The meta-puzzle
 
