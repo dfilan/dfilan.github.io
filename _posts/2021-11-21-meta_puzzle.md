@@ -78,7 +78,7 @@ Take the sentence "I worship Satan, or I am single"---where "or" is used in the 
 
 All of this is very similar to how normal logic works, but in some ways very different. First, note that in Australia, a sentence is true if and only if the person saying it worships God. So, wherever you see "I worship Satan", you can substitute "This sentence is false", and wherever you see "I worship God", you can substitute "This sentence is true"---all the reasoning will go thru the same.
 
-Now, let's think about how logic works off the island. I, the author of this post, am currently in California, one of the united states of America. Suppose I say to you "This sentence is false, or I am single". You could reason thusly:
+Now, let's think about how logic works off the island. I, the author of this post, am currently in California, one of the united states of America---far away from Australia. Suppose I say to you "This sentence is false, or I am single". You could reason thusly:
 
 > If the sentence is false, then the sentence is false or he is single---but then the sentence is true, because that's what the sentence says. Therefore it's true. If the sentence is true, then "this sentence is false, or Daniel is single" is true---but "this sentence is false" can't be right, we just said it was true. Therefore, Daniel is single. 
 
