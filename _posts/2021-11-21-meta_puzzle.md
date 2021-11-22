@@ -6,7 +6,7 @@ date:   2021-11-21
 
 _This post was inspired by the Raymond Smullyan book [The Riddle of Scheherazade](https://www.penguinrandomhouse.com/books/169727/the-riddle-of-scheherazade-by-raymond-smullyan/)._
 
-This post will be structured into three puzzles: first, a puzzle to warm up, then a meta-puzzle about the first puzzle. I strongly encourage you to give your best shot at the first puzzle---it is achievable, and the rest of the post will spoil the solution. I also encourage you to try the second puzzle before reading my solution.
+This post will be structured into three puzzles: first, a puzzle to warm up, then a meta-puzzle about the first puzzle. I strongly encourage you to give your best shot at the first puzzle---it is achievable, and the rest of the post will spoil the solution. I also encourage you to try the meta-puzzle before reading my solution.
 
 ## The puzzle
 
@@ -82,7 +82,7 @@ Now, let's think about how logic works off the island. I, the author of this pos
 
 > If the sentence is false, then the sentence is false or he is single---but then the sentence is true, because that's what the sentence says. Therefore it's true. If the sentence is true, then "this sentence is false, or Daniel is single" is true---but "this sentence is false" can't be right, we just said it was true. Therefore, Daniel is single. 
 
-It seems like something must be going wrong: I could have replaced "I am single" with any other claim, and you would have concluded that that claim must be true. But, once we replace "this sentence is false" with "I worship Satan", that's the exact statement and reasoning we used in the solution to the earlier puzzle, and it seemed valid there. So what's going on?
+It seems like something must be going wrong: I could have replaced "I am single" with any other claim, and you would have concluded that that claim must be true. But, once we replace "this sentence is false" with "I worship Satan", that's the exact statement and reasoning we used in the solution to the earlier puzzle, and it seemed valid there. So what's going on? What's the relevant difference between the faulty reasoning in America, and the valid reasoning in Australia?
 
 .
 
