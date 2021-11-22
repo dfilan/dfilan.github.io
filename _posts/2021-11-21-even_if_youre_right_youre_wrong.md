@@ -4,7 +4,7 @@ title:  "Even if you're right, you're wrong"
 date:   2021-11-21
 ---
 
-_Epistemic status: an aggrieved description of something I find annoying._
+_Epistemic status: an aggrieved depiction of something I find annoying._
 
 You claim P? OK. But even if you're right about P...
 
