@@ -6,7 +6,7 @@ date:   2022-03-10
 
 _Credit allocation: the structure of this estimate, and some of the numbers, are basically lifted from a talk Nuño Sempere gave, but most of the numbers aren’t._
 
-_Epistemic status: I spent maybe an hour putting this together. I spent more time thinking about the bit I wrote about more, and less time thinking about the bit I wrote about less. For everything but the prior, you might want to check out the Samotsvety Group's forecast [here](https://forecasting.substack.com/p/forecasting-newsletter-nuclear-risk)._
+_Epistemic status: I spent maybe an hour putting this together. I spent more time thinking about the bit I wrote about more, and less time thinking about the bit I wrote about less. For everything but the prior, you might want to check out the Samotsvety Group's forecast [here](https://forum.effectivealtruism.org/posts/KRFXjCqqfGQAYirm5/samotsvety-nuclear-risk-forecasts-march-2022)._
 
 _tl;dr About 0.01%._
 
