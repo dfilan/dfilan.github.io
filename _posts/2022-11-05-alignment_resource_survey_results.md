@@ -22,18 +22,17 @@ Participants were shown a list of resources, select those they'd engaged with fo
 
 ## Basic stats
 
-Entries with demographic info: 139
-Entries that rate various resources: 99
-
-Number that say 'I have heard of AI alignment': 95
-Number that say 'I am interested in AI alignment research': 109
-Number that say 'I am trying to move into a technical AI alignment career': 68
-Number that say 'I spend some of my time solving technical problems related to AI alignment': 51
-Number that say 'I spend some of my time doing AI alignment field/community-building': 37
-Number that say 'I spend some of my time facilitating technical AI alignment research in ways other than doing it directly': 35
-Number that say 'I spend some of my time publicly communicating about AI alignment': 36
-Number that say 'I am paid to work on technical AI alignment research': 30
-Number that say 'I help run an organization with an AI alignment mission (e.g. CHAI, MIRI, Anthropic)': 11
+- Entries with demographic info: 139
+- Entries that rate various resources: 99
+- Number that say 'I have heard of AI alignment': 95
+- Number that say 'I am interested in AI alignment research': 109
+- Number that say 'I am trying to move into a technical AI alignment career': 68
+- Number that say 'I spend some of my time solving technical problems related to AI alignment': 51
+- Number that say 'I spend some of my time doing AI alignment field/community-building': 37
+- Number that say 'I spend some of my time facilitating technical AI alignment research in ways other than doing it directly': 35
+- Number that say 'I spend some of my time publicly communicating about AI alignment': 36
+- Number that say 'I am paid to work on technical AI alignment research': 30
+- Number that say 'I help run an organization with an AI alignment mission (e.g. CHAI, MIRI, Anthropic)': 11
 
 ## Context for questions
 
