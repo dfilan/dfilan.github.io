@@ -6,7 +6,7 @@ date:   2022-11-05
 
 ## What am I talking about?
 
-In June and July of this year, I ran a survey to ask a lot of people how useful they found a variety of resources on AI alignment. I was particularly interested in "secondary resources": that is, not primary resource outputs, but resources that summarize, discuss, analyze, or propose concrete research efforts. I had many people promote the survey in an attempt to make it not obvious that I was running it (so that it would not affect what people said about [AXRP](axrp.net), the podcast that I run). CEA helped a great deal with the shaping and promotion of the survey.
+In June and July of this year, I ran a survey to ask a lot of people how useful they found a variety of resources on AI alignment. I was particularly interested in "secondary resources": that is, not primary resource outputs, but resources that summarize, discuss, analyze, or propose concrete research efforts. I had many people promote the survey in an attempt to make it not obvious that I was running it (so that it would not affect what people said about [AXRP](https://axrp.net), the podcast that I run). CEA helped a great deal with the shaping and promotion of the survey.
 
 The goal of the survey was initially to figure out how useful AXRP was, but I decided that it would be useful to get a broader look at the space of these secondary resources. My hope is that the results give people a better sense of what secondary resources might be worth checking out, as well as gaps that could be filled.
 
