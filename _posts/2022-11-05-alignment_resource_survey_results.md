@@ -60,7 +60,7 @@ Average usefulness ratings:
 3. AGI Safety Fundamentals Course (AGISF): 3.0 +/- 0.2
 4. MLAB: 2.8 +/- 0.8
 5. Rob Miles videos: 2.7 +/- 0.1
-6. 80k: 2.6 +/- 0.1
+6. 80k podcast: 2.6 +/- 0.1
 7. Superintelligence: 2.6 +/- 0.1
 8. AXRP: 2.6 +/- 0.2
 
