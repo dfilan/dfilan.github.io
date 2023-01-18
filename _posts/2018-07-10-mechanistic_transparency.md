@@ -6,7 +6,7 @@ date: 2018-07-10
 
 _Cross-posted to the [AI Alignment Forum](https://www.alignmentforum.org/posts/3kwR2dufdJyJamHQq/mechanistic-transparency-for-machine-learning)._
 
-[EDIT (added Jan 2023): it's come to my attention that this post was likely influenced by conversations I had with [Chris Olah](https://colah.github.io/about.html "colah's blog") related to the distinction between standard interpretability and the type called "mechanistic", as well as early experiments he had on what became the ['circuits'](https://distill.pub/2020/circuits/ "Distill.pub - Thread: Circuits") sequence of papers - my sincere apologies for not making this clearer earlier.]
+[EDIT (added Jan 2023): it's come to my attention that this post was likely influenced by conversations I had with [Chris Olah](https://colah.github.io/about.html "colah's blog") related to the distinction between standard interpretability and the type called "mechanistic", as well as early experiments he had which became the ['circuits'](https://distill.pub/2020/circuits/ "Distill.pub - Thread: Circuits") sequence of papers - my sincere apologies for not making this clearer earlier.]
 
 Lately I've been trying to come up with a thread of AI alignment research that (a) I can concretely see how it significantly contributes to actually building aligned AI and (b) seems like something that I could actually make progress on. After some thinking and narrowing down possibilities, I've come up with one -- basically, a particular angle on machine learning transparency research.
 
