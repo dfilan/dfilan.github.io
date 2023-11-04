@@ -13,12 +13,14 @@ One example of this argument form is about the potential to cause devastating pa
 1. The putative problem with releasing the weights of Large Language Models (LLMs) is that it can help teach people a bunch of facts about virology, bacteriology, and biology more generally, that can teach people how to produce pathogens that cause devastating pandemics.
 2. But we already have people paid to teach students about those topics.
 3. Therefore, if that putative problem is enough to say that we shouldn't release the weights of large language models, we should also not have textbooks and teachers on the topics of virology, bacteriology, and other relevant sub-topics of biology. But that's absurd!
+
 In this example, thing X is teaching people a bunch of facts, bad effect Y is creating devastating pandemics, and Z is the existence of teachers and textbooks.
 
 Another example is one that I'm not sure has been publicly written up, but occurred to me:
 1. Releasing the weights of LLMs is supposed to be bad because if people run the LLMs without supervision, they can do bad things.
 2. But if you make LLMs in the first place, you can run them without supervision.
 3. So if it's bad to publicly release their weights, isn't it also bad to make them in the first place?
+
 In this example, thing X is running the model, bad effect Y is generic bad things that people worry about, and Z is the model existing in the first place.
 
 However, I think these arguments don't actually work, because they implicitly assume that the costs and benefits scale proportionally to how much X happens. Suppose instead that the benefits of thing X grow proportionally to how much it happens[^2]: for example, maybe every person who learns about biology makes roughly the same amount of incremental progress in learning how to cure disease and make humans healthier. Also suppose that every person who does thing X has a small probability of causing bad effect Y for everyone that negates all the benefits of X: for example, perhaps 0.01% of people would cause a global pandemic killing everyone if they learned enough about biology. Then, the expected value of X happening can be high when it happens a little (because you probably get the good effects and not the bad effects Y), but low when it happens a lot (because you almost certainly get bad effect Y, and the tiny probability of the good effects isn't worth it). In this case, it makes sense that it might be fine that Z is true (e.g. that some people can learn various sub-topics of biology with great tutors), but bad to publicly release model weights to make X happen a ton.
