@@ -4,7 +4,7 @@ title:  "How to type Aleksander Mądry's last name in LaTeX"
 date: 2023-11-20
 ---
 
-1. Type "Madry"
+1. Type "Madry".
 2. Realize that the a has a little tail that you need to include.
 3. That's a feature of the Polish alphabet called an [ogonek](https://en.wikipedia.org/wiki/Ogonek).
 4. You type it in LaTeX like so: `M\k{a}dry`.
