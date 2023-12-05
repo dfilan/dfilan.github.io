@@ -4,7 +4,7 @@ title:  "n of m ring signatures"
 date: 2023-12-04
 ---
 
-A normal cryptographic signature associated with a message and a public key lets you prove to the world that it was made by someone with access to the private key associated with the known public key, without revealing that public key. You can read about it on Wikipedia [here](https://en.wikipedia.org/wiki/Digital_signature).
+A normal cryptographic signature associated with a message and a public key lets you prove to the world that it was made by someone with access to the private key associated with the known public key, without revealing that private key. You can read about it on Wikipedia [here](https://en.wikipedia.org/wiki/Digital_signature).
 
 A ring signature associated with a message and a set of public keys lets you prove to the world that it was made by someone with access to the message and one private key associated to one of the public keys in the set, but nobody will be able to tell which public key it was. This lets you say something semi-anonymously, which is neat. It's also used in the private cryptocurrency Monero. You can read about them on Wikipedia [here](https://en.wikipedia.org/wiki/Ring_signature).
 
