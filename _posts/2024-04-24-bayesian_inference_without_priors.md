@@ -59,6 +59,8 @@ Finally, it points to an interesting extension. In some cases, the meaning of va
 
 This construction was inspired by noting the similarity between the calculation of the prior term and the likelihood term in Bayes' formula. The way it highlighted that similarity was by turning the prior term into a likelihood. But is there some way of re-casting the problem so that the likelihood term becomes a prior, and the prior term becomes a likelihood?
 
+---
+
 [^1]: Compare priors and posteriors, which are both about the probability of the hypotheses in question, and are therefore more similar---you can use a posterior as a new prior when facing further evidence.
 
 [^2]: This can actually be relaxed without changing our results: we can instead suppose that you're not sure which way the speaker is carving up "hypotheses", but that once they pick such a way, the two hypotheses they state will be mutually exclusive.
