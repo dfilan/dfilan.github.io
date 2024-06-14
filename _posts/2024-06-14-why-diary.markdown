@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Why keep a diary, and why wish for large language models"
+date: 2024-06-14
+---
+
+_Inspired by a dream I just woke up from, where I did not keep a diary_
+
+One of the people with whom I have the most intimate of connections is my past self - in particular, my child self. We share a large number of commonalities: much of our basic outlook, our personality, many of our drives. But, of course, my child self is different from me in many ways. He had thought less about things, encountered fewer things, developed and drifted less.
+
+It seems valuable to become more acquainted with my child self. I'd like to know the things he would want from me today, but also just what he was like and how he thought differently than I do. I don't have a strict utilitarian case for this, to be clear: but imagine you had a child in your care. Wouldn't you want to know those things about the child, just out of curiosity? and to help build a mutually agreeable local world? And shouldn't I feel even more strongly about the child who was me, who entrusted their future to me, with whom I have in some ways an even stronger relationship and to whom I have in some ways an even greater duty of care?
+
+Right now, perhaps because of the dream I just woke up from, I feel this most acutely for my child self. But there are other selves (as if 'childhood Daniel' was merely one self) I feel similarly about. Myself during the first and second halves of my undergraduate years, beginning to live away from family. Myself after just having moved to Berkeley, becoming one of the 'rationalists'. Myself during the more difficult parts of my PhD. Right now, I have a pretty strong connection with most of these, but in the future I won't. And even now I can feel undergraduate Daniel slipping out of my hands.
+
+So I wish I had kept a diary, or blogged (in an unusually personal manner), or somehow or other done a better job of recording my thoughts and desires and frames and fears and hopes. I currently keep a weekly journal, which I hope is sufficient, but I must admit it's a bit businesslike. Another way to preserve these would be interviews - perhaps this could be a new year tradition, recording a few hours of audio/video about how the past year was, what you hope for the next year, and anything from idle chit-chat to deep conversation with the hope of capturing something of what it's like to be you on this first of January. The sleep deprivation would probably help.
+
+But diaries are a difficult medium to extract value from. I suppose some people become famous and then [publish their diaries](https://en.wikipedia.org/wiki/Diaries_1969%E2%80%931979:_The_Python_Years), or they become famous for the wrong reasons and their diaries are [published and censored for them](https://en.wikipedia.org/wiki/The_Diary_of_a_Young_Girl), and I suppose people choose to read those. But to be honest I can't imagine that reading my journal entries is a particularly enjoyable pursuit. And at the very least it takes quite a long time to get a sufficient sample.
+
+This is a nice service that large language models could provide - reading your diaries for you, and being able to simulate your past self. Yes, I'm an AI doomer, and I instinctually dislike these sorts of things. And yes, wouldn't it be awful if some alien machine overwrote your memories of yourself. But it's not inconceivable that it could work, right? And if it worked, wouldn't that be good? To bridge the chasm of time and connect to a child who is now half-gone? For someone to efficiently read those records and act as an empathetic historian?
+
+I suppose people usually make this proposal in the third person - a LLM that could simulate Ruth Bader Ginsburg or George Washington or your deceased spouse (or your parents as they were when you were 5? 15?). Perhaps it's somewhat narcissistic to pine for this version. But I guess I can be excused, since I didn't in fact dream of those things.
+
+But when I was 10 I don't think I would have been sufficiently compelled by this reasoning anyway.
