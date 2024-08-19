@@ -9,63 +9,67 @@
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+         </head>
   <body>
     <div class="wrapper">
-    {% include sidebar.html %}
-<section>
+      {% include sidebar.html %}
+      <section>
 
-<h2>
-<a id="about-me" class="anchor" href="#about-me" aria-hidden="true"><span class="octicon octicon-link"></span></a>About me</h2>
+        <h2>
+          <a id="about-me" class="anchor" href="#about-me" aria-hidden="true"><span class="octicon octicon-link"></span></a>About me</h2>
 
-<p>I'm currently a PhD candidate at UC Berkeley being supervised by <a href="https://people.eecs.berkeley.edu/~russell/">Stuart Russell</a>. I do ML research relevant to ensuring that future artifical intelligences who may be much smarter than us behave in a safe way. Discussions of problems in this area are available <a href="https://intelligence.org/technical-agenda/">here</a>, <a href="https://intelligence.org/files/AlignmentMachineLearning.pdf">here</a>, and <a href="http://arxiv.org/abs/1606.06565">here</a>.</p>
+        <p>I'm currently a research manager at <a href="https://www.matsprogram.org/">MATS</a>, where I chat with scholars and hopefully turn them into cool resarchers - specifically, working on AI alignment, interpretability, and/or governance.</p>
 
-<p>I also have a <a href="https://axrp.net">podcast</a> about this field of research. It's called <a href="https://axrp.net">AXRP</a>, which is short for the AI X-risk Research Podcast. You can listen to episodes on <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9heHJwb2RjYXN0LmxpYnN5bi5jb20vcnNz">Google podcasts</a>, or by searching "AXRP" in your favourite podcast app. Alteratively, you can read transcripts <a href="https://axrp.net">here</a>.</p>
+        <!-- <p>I'm currently a PhD candidate at UC Berkeley being supervised by <a href="https://people.eecs.berkeley.edu/~russell/">Stuart Russell</a>. I do ML research relevant to ensuring that future artifical intelligences who may be much smarter than us behave in a safe way. Discussions of problems in this area are available <a href="https://intelligence.org/technical-agenda/">here</a>, <a href="https://intelligence.org/files/AlignmentMachineLearning.pdf">here</a>, and <a href="http://arxiv.org/abs/1606.06565">here</a>.</p> -->
 
-<p>I did my undergrad at the Australian National University, studying the theory of reinforcement learning, mathematics, and theoretical physics. I did my honours year (similar to a research master's degree lasting one year) under <a href="http://www.hutter1.net/">Marcus Hutter</a>; you can read my thesis "Resource-bounded Complexity-based Priors for Agents" <a href="/pdfs/thesis.pdf">here</a>.</p>
+        <p>I also have a <a href="https://axrp.net">podcast</a> about research related to reducing existential risk from AI. It's called <a href="https://axrp.net">AXRP</a>, which is short for the AI X-risk Research Podcast. You can listen to episodes on <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9heHJwb2RjYXN0LmxpYnN5bi5jb20vcnNz">Google podcasts</a>, or by searching "AXRP" in your favourite podcast app. Alteratively, you can read transcripts <a href="https://axrp.net">here</a>.</p>
 
-<p>I'm interested in <a href="https://www.effectivealtruism.org/">effective altruism</a>, how we can use our limited resources to do the most good in the world. I also sometimes <a href="/bets">bet on things</a>, for reasons described by <a href="http://econlog.econlib.org/archives/2012/05/the_bettors_oat.html">Bryan Caplan</a> and <a href="http://econlog.econlib.org/archives/2014/07/kant_on_betting.html">Immanuel Kant</a>.</p>
+        <p>I completed my PhD in AI at UC Berkeley in 2024, where I was supervised by <a href="https://people.eecs.berkeley.edu/~russell/">Stuart Russell</a>. You can read my thesis "Structure and Representation in Neural Networks" <a href="/pdfs/phd_thesis.pdf">here</a>.</p>
 
-<h3>Publications</h3>
+        <p>I did my undergrad at the Australian National University, studying the theory of reinforcement learning, mathematics, and theoretical physics. I did my honours year (similar to a research master's degree lasting one year) under <a href="http://www.hutter1.net/">Marcus Hutter</a>; you can read my thesis "Resource-bounded Complexity-based Priors for Agents" <a href="/pdfs/undergrad_thesis.pdf">here</a>.</p>
 
-<p><a href="/danielfilan.bib">bibtex</a></p>
+        <p>I'm interested in <a href="https://www.effectivealtruism.org/">effective altruism</a>, how we can use our limited resources to do the most good in the world. I also sometimes <a href="/bets">bet on things</a>, for reasons described by <a href="http://econlog.econlib.org/archives/2012/05/the_bettors_oat.html">Bryan Caplan</a> and <a href="http://econlog.econlib.org/archives/2014/07/kant_on_betting.html">Immanuel Kant</a>.</p>
 
-<ul>
+        <h3>Publications</h3>
 
-  <li><strong>Clusterability in Neural Networks.</strong> <a href="https://arxiv.org/abs/2103.03386">arxiv</a><br>
-    With Stephen Casper, Shlomi Hod, Cody Wild, Andrew Critch, and Stuart Russell.<br>
-    Introduces the task of dividing the neurons of a network into groups such that edges between neurons in the same group have higher weight than edges between neurons in different groups. Implements this using graph clustering, so 'clusterability' refers to the divisibility of networks. Shows that in many conditions, networks trained with pruning and/or dropout are more clusterable than if their weights were randomly permuted. Also introduces a method of regularizing networks for clusterability.</li>
+        <p><a href="/danielfilan.bib">bibtex</a></p>
 
-  <li><strong>Exploring Hierarchy-Aware Inverse Reinforcement Learning.</strong> <a href="https://arxiv.org/abs/1807.05037">arxiv</a><br>
-With Chris Cundy (lead author).<br>
-  Presented at GoalsRL 2018, held jointly at ICML, IJCAI, and AAMAS 2018.<br>
-Advocates for the use of hierarchical planning models of humans for use in inverse reinforcement learning as more realistic for complex tasks, showing that in one task they perform comparably to state-of-the-art models.</li>
-  
-  <li><strong>Modeling Agents with Probabilistic Programs.</strong> <a href="http://agentmodels.org">website</a><br>
-    With Owain Evans (lead author), Andreas Stuhlm&uuml;ller, and John Salvatier.<br>
-    Web book.<br>
-  A web book explaining how to write models of agents in the <a href="http://webppl.org/">webppl</a> probabilistic programming language. Covers topics such as "planning as inference", (PO)MDPs, inverse reinforcement learning, hyperbolic discounting, myopic planning, and multi-agent planning.</li>
-  
-<li><strong>Self-Modification of Policy and Utility Function in Rational Agents.</strong> <a href="http://arxiv.org/abs/1605.03142">arxiv</a><br>
-With Tom Everitt (lead author), Mayank Daswani, and Marcus Hutter.<br>
-  Presented at AGI 2016, winner of the Kurzweil prize for best paper.<br>
-Discusses agents that can modify their source code and predict the result of these modifications, and how to define them so that they don't make modifications that stop them from optimising what we originally told them to optimise.</li>
+        <ul>
 
-<li><strong>Loss Bounds and Time Complexity for Speed Priors.</strong> <a href="http://www.jmlr.org/proceedings/papers/v51/filan16.html">jmlr</a><br>
-With Jan Leike and Marcus Hutter.<br>
-Presented at AISTATS 2016.<br>
-A discussion of 'speed priors', that is to say priors over infinite sequences of bits that penalise complex strings, where complexity is measured by the length of programs that produce a string, and the time those programs take to run. Builds off J&uuml;rgen Schmidhuber's <a href = "http://link.springer.com/chapter/10.1007/3-540-45435-7_15">original paper</a> defining his Speed Prior.</li>
+          <li><strong>Clusterability in Neural Networks.</strong> <a href="https://arxiv.org/abs/2103.03386">arxiv</a><br>
+            With Stephen Casper, Shlomi Hod, Cody Wild, Andrew Critch, and Stuart Russell.<br>
+            Introduces the task of dividing the neurons of a network into groups such that edges between neurons in the same group have higher weight than edges between neurons in different groups. Implements this using graph clustering, so 'clusterability' refers to the divisibility of networks. Shows that in many conditions, networks trained with pruning and/or dropout are more clusterable than if their weights were randomly permuted. Also introduces a method of regularizing networks for clusterability.</li>
 
-<li><strong>Thesis: Resource-bounded Complexity-based Priors for Agents.</strong> <a href="/pdfs/thesis.pdf">pdf</a><br/>
-Supervised by Marcus Hutter in 2015.<br>
-My honours thesis about speed priors, used both in sequence prediction and in an RL setting. The most interesting results are contained in the AISTATS paper above.</li>
+          <li><strong>Exploring Hierarchy-Aware Inverse Reinforcement Learning.</strong> <a href="https://arxiv.org/abs/1807.05037">arxiv</a><br>
+            With Chris Cundy (lead author).<br>
+            Presented at GoalsRL 2018, held jointly at ICML, IJCAI, and AAMAS 2018.<br>
+            Advocates for the use of hierarchical planning models of humans for use in inverse reinforcement learning as more realistic for complex tasks, showing that in one task they perform comparably to state-of-the-art models.</li>
+          
+          <li><strong>Modeling Agents with Probabilistic Programs.</strong> <a href="http://agentmodels.org">website</a><br>
+            With Owain Evans (lead author), Andreas Stuhlm&uuml;ller, and John Salvatier.<br>
+            Web book.<br>
+            A web book explaining how to write models of agents in the <a href="http://webppl.org/">webppl</a> probabilistic programming language. Covers topics such as "planning as inference", (PO)MDPs, inverse reinforcement learning, hyperbolic discounting, myopic planning, and multi-agent planning.</li>
+          
+          <li><strong>Self-Modification of Policy and Utility Function in Rational Agents.</strong> <a href="http://arxiv.org/abs/1605.03142">arxiv</a><br>
+            With Tom Everitt (lead author), Mayank Daswani, and Marcus Hutter.<br>
+            Presented at AGI 2016, winner of the Kurzweil prize for best paper.<br>
+            Discusses agents that can modify their source code and predict the result of these modifications, and how to define them so that they don't make modifications that stop them from optimising what we originally told them to optimise.</li>
 
-</ul>
+          <li><strong>Loss Bounds and Time Complexity for Speed Priors.</strong> <a href="http://www.jmlr.org/proceedings/papers/v51/filan16.html">jmlr</a><br>
+            With Jan Leike and Marcus Hutter.<br>
+            Presented at AISTATS 2016.<br>
+            A discussion of 'speed priors', that is to say priors over infinite sequences of bits that penalise complex strings, where complexity is measured by the length of programs that produce a string, and the time those programs take to run. Builds off J&uuml;rgen Schmidhuber's <a href = "http://link.springer.com/chapter/10.1007/3-540-45435-7_15">original paper</a> defining his Speed Prior.</li>
+
+          <!-- <li><strong>Thesis: Resource-bounded Complexity-based Priors for Agents.</strong> <a href="/pdfs/undergrad_thesis.pdf">pdf</a><br/> -->
+          <!--   Supervised by Marcus Hutter in 2015.<br> -->
+          <!--   My honours thesis about speed priors, used both in sequence prediction and in an RL setting. The most interesting results are contained in the AISTATS paper above.</li> -->
+
+        </ul>
 
     </div>
     <script src="javascripts/scale.fix.js"></script>
-</section>
+    </section>
   </body>
 </html>
