@@ -4,7 +4,7 @@ title:  "A failure of an argument against sola scriptura"
 date: 2024-11-01
 ---
 
-**A failure of an argument against sola scriptura** (cross-posted from [Superstimulus](https://superstimul.us/display/19e88760-7167-2597-fdd0-c5d974638185))
+(cross-posted from [Superstimulus](https://superstimul.us/display/19e88760-7167-2597-fdd0-c5d974638185))
 
 Recently, Catholic apologist Joe Heschmeyer has produced [a couple](https://www.youtube.com/watch?v=5_SGbUDFQWg) [of videos](url=https://www.youtube.com/watch?v=GlSkKi3chQA) arguing against the Protestant view of the Bible - specifically, the claims of Sola Scriptura and Perspicuity (capitalized because I'll want to refer to them as premises later). "Sola Scriptura" has been operationalized a few different ways, but one way that most Protestants would agree on is (taken from the Westminster confession):
 > The whole counsel of God, concerning all things necessary for [...] man’s salvation [...] is either expressly set down in Scripture, or by good and necessary consequence may be deduced from Scripture
