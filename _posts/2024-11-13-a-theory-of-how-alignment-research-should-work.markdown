@@ -7,7 +7,7 @@ date: 2024-11-13
 Epistemic status:
 - I listened to [the Dwarkesh episode with Gwern](https://www.dwarkeshpatel.com/p/gwern-branwen) and started attempting to think about life, the universe, and everything 
 - less than an hour of thought has gone into this post
-- that said, it comes from a background of me thinking for a while about how the field of AI alignment should relate to agent foundations research
+- that said, it comes from a background of me [thinking](https://www.lesswrong.com/posts/WgMhovN7Gs6Jpn3PH/danielfilan-s-shortform-feed?commentId=RzdD4JiewyyHeuYBb) for a while about how the field of AI alignment should relate to agent foundations research
 
 Maybe obvious to everyone but me, or totally wrong (this doesn't really grapple with the challenges of working in a domain where an intelligent being might be working against you), but:
 - we currently don't know how to make super-smart computers that do our will
