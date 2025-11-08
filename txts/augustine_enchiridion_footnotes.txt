@@ -1,0 +1,325 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Augustinus Hipponensis - Enchiridion de Fide, Spe et Charitate liber unus - Notae</title>
+<base target="_self">
+<link rel="stylesheet" type="text/css" href="../augustinus_lat.css">
+<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12738552-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+
+<p>&nbsp;</p>
+<p><font color="#0000ff"><a name="N1">1</a></font> - 1 Cor 1, 20.</p>
+<p><font color="#0000ff"><a name="N2">2</a></font> - Sap 6, 24.</p>
+<p><font color="#0000ff"><a name="N3">3</a></font> - Rom 16, 19.</p>
+<p><font color="#0000ff"><a name="N4">4</a></font> - Iob 28, 28.</p>
+<p><font color="#0000ff"><a name="N5">5</a></font> - Cf. Gal 5, 6.</p>
+<p><font color="#0000ff"><a name="N6">6</a></font> - 1 Cor 3, 11.</p>
+<p><font color="#0000ff"><a name="N7">7</a></font> - Ioel 2, 32. Cf. Act 2, 21; Rom 10, 13.</p>
+<p><font color="#0000ff"><a name="N8">8</a></font> - Rom 10, 14.</p>
+<p><font color="#0000ff"><a name="N9">9</a></font> - L<font size="1">UCANO</font>, <i>Pharsalia </i>2, 15.</p>
+<p><font color="#0000ff"><a name="N10">10</a></font> - V<font size="1">IRGILIO</font>, <i>Aen. </i>4, 419.</p>
+<p><font color="#0000ff"><a name="N11">11</a></font> - Hebr 11, 1.</p>
+<p><font color="#0000ff"><a name="N12">12</a></font> - Rom 8, 24.</p>
+<p><font color="#0000ff"><a name="N13">13</a></font> - Iac 2, 19.</p>
+<p><font color="#0000ff"><a name="N14">14</a></font> - Cf. Gal 5, 6.</p>
+<p><font color="#0000ff"><a name="N15">15</a></font> - Cf. Gen 1, 31.</p>
+<p><font color="#0000ff"><a name="N16">16</a></font> - Cf. V<font size="1">IRGILIO</font>, <i>Aen. </i>10, 100.</p>
+<p><font color="#0000ff"><a name="N17">17</a></font> - Isai 5, 20.</p>
+<p><font color="#0000ff"><a name="N18">18</a></font> - Lc 6, 45; cf. Mt 12, 35.</p>
+<p><font color="#0000ff"><a name="N19">19</a></font> - Mt 7, 18.</p>
+<p><font color="#0000ff"><a name="N20">20</a></font> - Cf. Mt 7, 16.</p>
+<p><font color="#0000ff"><a name="N21">21</a></font> - Mt 12, 33.</p>
+<p><font color="#0000ff"><a name="N22">22</a></font> - V<font size="1">IRGILIO</font>, <i>Georgica</i>, 2, 490.</p>
+<p><font color="#0000ff"><a name="N23">23</a></font> - V<font size="1">IRGILIO</font>, <i>Georgica</i>, 2, 480-481.</p>
+<p><font color="#0000ff"><a name="N24">24</a></font> - Cf. C<font size="1">ICERONE</font>, <i>Hortensius</i>, fragm. 95 (Müller).</p>
+<p><font color="#0000ff"><a name="N25">25</a></font> - Cf. C<font size="1">ICERONE</font>, <i>Academica</i>, 2, 66.</p>
+<p><font color="#0000ff"><a name="N26">26</a></font> - V<font size="1">IRGILIO</font>, <i>Eclogae</i> 7, 41.</p>
+<p><font color="#0000ff"><a name="N27">27</a></font> - Mt 5, 37.</p>
+<p><font color="#0000ff"><a name="N28">28</a></font> - Cf. Io 14, 6.</p>
+<p><font color="#0000ff"><a name="N29">29</a></font> - Cf. S<font size="1">ALLUSTIO</font>, <i>De coniuratione Catilinae</i> 10.</p>
+<p><font color="#0000ff"><a name="N30">30</a></font> - Isai 5, 20.</p>
+<p><font color="#0000ff"><a name="N31">31</a></font> - Cf. Act 12, 7.</p>
+<p><font color="#0000ff"><a name="N32">32</a></font> - V<font size="1">IRGILIO</font>, <i>Aen.</i>10 392.</p>
+<p><font color="#0000ff"><a name="N33">33</a></font> - Cf. Hab 2, 4; Rom 1, 17; Hebr 10, 38.</p>
+<p><font color="#0000ff"><a name="N34">34</a></font> - Cf. Gal 5, 6.</p>
+<p><font color="#0000ff"><a name="N35">35</a></font> - Cf. Act 12, 9 ss.</p>
+<p><font color="#0000ff"><a name="N36">36</a></font> - Cf. Gen 37, 33.</p>
+<p><font color="#0000ff"><a name="N37">37</a></font> - Cf. Rom 8, 20.</p>
+<p><font color="#0000ff"><a name="N38">38</a></font> - Mt 5, 37.</p>
+<p><font color="#0000ff"><a name="N39">39</a></font> - Cf. Rom 8, 17.</p>
+<p><font color="#0000ff"><a name="N40">40</a></font> - Mt 6, 12.</p>
+<p><font color="#0000ff"><a name="N41">41</a></font> - Cf. Gen 2, 17.</p>
+<p><font color="#0000ff"><a name="N42">42</a></font> - Cf. Gen 2, 15.</p>
+<p><font color="#0000ff"><a name="N43">43</a></font> - Rom 5, 12.</p>
+<p><font color="#0000ff"><a name="N44">44</a></font> - Cf. Lc 20, 36.</p>
+<p><font color="#0000ff"><a name="N45">45</a></font> - Cf. Isai 54, 1.</p>
+<p><font color="#0000ff"><a name="N46">46</a></font> - Cf. Rom 4, 17.</p>
+<p><font color="#0000ff"><a name="N47">47</a></font> - Cf. Sap 11, 21.</p>
+<p><font color="#0000ff"><a name="N48">48</a></font> - 2 Pt 2, 19.</p>
+<p><font color="#0000ff"><a name="N49">49</a></font> - Io 8, 36.</p>
+<p><font color="#0000ff"><a name="N50">50</a></font> - Eph 2, 8.</p>
+<p><font color="#0000ff"><a name="N51">51</a></font> - Cf. 1 Cor 7, 25.</p>
+<p><font color="#0000ff"><a name="N52">52</a></font> - Eph 2, 8-9.</p>
+<p><font color="#0000ff"><a name="N53">53</a></font> - Eph 2, 10.</p>
+<p><font color="#0000ff"><a name="N54">54</a></font> - Cf. 2 Cor 5, 17.</p>
+<p><font color="#0000ff"><a name="N55">55</a></font> - Ps 50, 12.</p>
+<p><font color="#0000ff"><a name="N56">56</a></font> - Phil 2, 13.</p>
+<p><font color="#0000ff"><a name="N57">57</a></font> - Rom 9, 16.</p>
+<p><font color="#0000ff"><a name="N58">58</a></font> - Cf. Phil 3, 14.</p>
+<p><font color="#0000ff"><a name="N59">59</a></font> - Cf. Prov 8, 35 (<i>sec. LXX</i>).</p>
+<p><font color="#0000ff"><a name="N60">60</a></font> - Ps 58, 11.</p>
+<p><font color="#0000ff"><a name="N61">61</a></font> - Ps 22, 6.</p>
+<p><font color="#0000ff"><a name="N62">62</a></font> - Cf. Mt 5, 44.</p>
+<p><font color="#0000ff"><a name="N63">63</a></font> - Cf. Mt 7, 7.</p>
+<p><font color="#0000ff"><a name="N64">64</a></font> - Ps 89, 9.</p>
+<p><font color="#0000ff"><a name="N65">65</a></font> - Iob 14, 1.</p>
+<p><font color="#0000ff"><a name="N66">66</a></font> - Io 3, 36.</p>
+<p><font color="#0000ff"><a name="N67">67</a></font> - Eph 2, 3.</p>
+<p><font color="#0000ff"><a name="N68">68</a></font> - Rom 5, 10-9.</p>
+<p><font color="#0000ff"><a name="N69">69</a></font> - Rom 8, 14.</p>
+<p><font color="#0000ff"><a name="N70">70</a></font> - Io 1, 14.</p>
+<p><font color="#0000ff"><a name="N71">71</a></font> - Rom 3, 20.</p>
+<p><font color="#0000ff"><a name="N72">72</a></font> - Io 1, 1.</p>
+<p><font color="#0000ff"><a name="N73">73</a></font> - Cf. Io 10, 30.</p>
+<p><font color="#0000ff"><a name="N74">74</a></font> - Cf. Io 14, 28.</p>
+<p><font color="#0000ff"><a name="N75">75</a></font> - Cf. Io 1, 14.</p>
+<p><font color="#0000ff"><a name="N76">76</a></font> - Cf. Phil 2, 6-7.</p>
+<p><font color="#0000ff"><a name="N77">77</a></font> - Lc 1, 28.30.</p>
+<p><font color="#0000ff"><a name="N78">78</a></font> - Io 1, 14.</p>
+<p><font color="#0000ff"><a name="N79">79</a></font> - Lc 1, 35.</p>
+<p><font color="#0000ff"><a name="N80">80</a></font> - Mt 1, 20.</p>
+<p><font color="#0000ff"><a name="N81">81</a></font> - Io 1, 3.</p>
+<p><font color="#0000ff"><a name="N82">82</a></font> - Rom 1, 3.</p>
+<p><font color="#0000ff"><a name="N83">83</a></font> - Cf. Mt 1, 20.</p>
+<p><font color="#0000ff"><a name="N84">84</a></font> - Cf. Io 3, 5.</p>
+<p><font color="#0000ff"><a name="N85">85</a></font> - Cf. Mt 23, 15.</p>
+<p><font color="#0000ff"><a name="N86">86</a></font> - Cf. Mt 8, 12.</p>
+<p><font color="#0000ff"><a name="N87">87</a></font> - Cf. Io 4, 10; Act 8, 20.</p>
+<p><font color="#0000ff"><a name="N88">88</a></font> - Cf. Rom 8, 3.</p>
+<p><font color="#0000ff"><a name="N89">89</a></font> - Cf. Lev 6, 23; Num 8, 8; Os 4, 8.</p>
+<p><font color="#0000ff"><a name="N90">90</a></font> - 2 Cor 5, 20.</p>
+<p><font color="#0000ff"><a name="N91">91</a></font> - 2 Cor 5, 21.</p>
+<p><font color="#0000ff"><a name="N92">92</a></font> - Cf. Rom 8, 3.</p>
+<p><font color="#0000ff"><a name="N93">93</a></font> - Cf. Rom 6, 3-4; 8, 3.</p>
+<p><font color="#0000ff"><a name="N94">94</a></font> - V<font size="1">IRGILIO</font>, <i>Aen.2</i>, 20.</p>
+<p><font color="#0000ff"><a name="N95">95</a></font> - Num 21, 7 (<i>sec. LXX</i>).</p>
+<p><font color="#0000ff"><a name="N96">96</a></font> - Mt 2, 20.</p>
+<p><font color="#0000ff"><a name="N97">97</a></font> - Ex 32, 31.</p>
+<p><font color="#0000ff"><a name="N98">98</a></font> - Ex 32, 4.</p>
+<p><font color="#0000ff"><a name="N99">99</a></font> - Cf. Rom 5, 12.</p>
+<p><font color="#0000ff"><a name="N100">100</a></font> - Cf. Ex 20, 5; Dt 5, 9.</p>
+<p><font color="#0000ff"><a name="N101">101</a></font> - Ez 18, 2.</p>
+<p><font color="#0000ff"><a name="N102">102</a></font> - Ps 50, 7.</p>
+<p><font color="#0000ff"><a name="N103">103</a></font> - Cf. Deut 5, 9.</p>
+<p><font color="#0000ff"><a name="N104">104</a></font> - 1 Tim 2, 5</p>
+<p><font color="#0000ff"><a name="N105">105</a></font> - Isai 40, 3; Mt 3, 3; Lc 3, 4.</p>
+<p><font color="#0000ff"><a name="N106">106</a></font> - Cf. Mt 3, 11; Mc 1, 8.</p>
+<p><font color="#0000ff"><a name="N107">107</a></font> - Ps 2, 7; Hebr 1, 5; 5, 5. Cf. Mt 3, 17.</p>
+<p><font color="#0000ff"><a name="N108">108</a></font> - Cf. Mt 3, 15.</p>
+<p><font color="#0000ff"><a name="N109">109</a></font> - Cf. Io 1, 29.</p>
+<p><font color="#0000ff"><a name="N110">110</a></font> - Cf. Rom 5, 12.18.</p>
+<p><font color="#0000ff"><a name="N111">111</a></font> - Rom 5, 16.</p>
+<p><font color="#0000ff"><a name="N112">112</a></font> - Rom 5, 18.</p>
+<p><font color="#0000ff"><a name="N113">113</a></font> - Rom 6, 1.</p>
+<p><font color="#0000ff"><a name="N114">114</a></font> - Rom 5, 20.</p>
+<p><font color="#0000ff"><a name="N115">115</a></font> - Rom 6, 2.</p>
+<p><font color="#0000ff"><a name="N116">116</a></font> - Rom 6, 3.</p>
+<p><font color="#0000ff"><a name="N117">117</a></font> - Rom 6, 4-11.</p>
+<p><font color="#0000ff"><a name="N118">118</a></font> - Gal 5, 24.</p>
+<p><font color="#0000ff"><a name="N119">119</a></font> - Rom 6, 4.</p>
+<p><font color="#0000ff"><a name="N120">120</a></font> - Rom 6, 4.</p>
+<p><font color="#0000ff"><a name="N121">121</a></font> - Col 3, 1-3.</p>
+<p><font color="#0000ff"><a name="N122">122</a></font> - Col 3, 4.</p>
+<p><font color="#0000ff"><a name="N123">123</a></font> - Io 5, 29.</p>
+<p><font color="#0000ff"><a name="N124">124</a></font> - Ps 53, 3.</p>
+<p><font color="#0000ff"><a name="N125">125</a></font> - Cf. Mt 25, 31-46.</p>
+<p><font color="#0000ff"><a name="N126">126</a></font> - Ps 42, 1.</p>
+<p><font color="#0000ff"><a name="N127">127</a></font> - Cf. Gal 4, 26.</p>
+<p><font color="#0000ff"><a name="N128">128</a></font> - Cf. Ps 112, 3.</p>
+<p><font color="#0000ff"><a name="N129">129</a></font> - Cf. Apoc 5, 9.</p>
+<p><font color="#0000ff"><a name="N130">130</a></font> - Cf. Ps 81, 6; Io 10, 34-35.</p>
+<p><font color="#0000ff"><a name="N131">131</a></font> - 1 Cor 6, 19.</p>
+<p><font color="#0000ff"><a name="N132">132</a></font> - 1 Cor 6, 15.</p>
+<p><font color="#0000ff"><a name="N133">133</a></font> - 1 Cor 3, 16.</p>
+<p><font color="#0000ff"><a name="N134">134</a></font> - Cf. Col 1, 18.</p>
+<p><font color="#0000ff"><a name="N135">135</a></font> - Io 2, 19.</p>
+<p><font color="#0000ff"><a name="N136">136</a></font> - 2 Pt 2, 4.</p>
+<p><font color="#0000ff"><a name="N137">137</a></font> - Hebr 1, 13.</p>
+<p><font color="#0000ff"><a name="N138">138</a></font> - Ps 148, 2.</p>
+<p><font color="#0000ff"><a name="N139">139</a></font> - Col 1, 16.</p>
+<p><font color="#0000ff"><a name="N140">140</a></font> - Zach 1, 9.</p>
+<p><font color="#0000ff"><a name="N141">141</a></font> - Mt 1, 20.</p>
+<p><font color="#0000ff"><a name="N142">142</a></font> - Cf. Gen 18, 4; 19, 2.</p>
+<p><font color="#0000ff"><a name="N143">143</a></font> - Cf. Gen 32, 29-32.</p>
+<p><font color="#0000ff"><a name="N144">144</a></font> - Cf. 2 Cor 11, 14.</p>
+<p><font color="#0000ff"><a name="N145">145</a></font> - Rom 8, 31.</p>
+<p><font color="#0000ff"><a name="N146">146</a></font> - Eph 1, 10.</p>
+<p><font color="#0000ff"><a name="N147">147</a></font> - Col 1, 19-20.</p>
+<p><font color="#0000ff"><a name="N148">148</a></font> - Cf. Phil 4, 7.</p>
+<p><font color="#0000ff"><a name="N149">149</a></font> - Cf. Mt 18, 10.</p>
+<p><font color="#0000ff"><a name="N150">150</a></font> - Cf. 1 Cor 13, 9.12.</p>
+<p><font color="#0000ff"><a name="N151">151</a></font> - Cf. Lc 20, 36.</p>
+<p><font color="#0000ff"><a name="N152">152</a></font> - Cf. Lc 15, 32.</p>
+<p><font color="#0000ff"><a name="N153">153</a></font> - Rom 8, 14.</p>
+<p><font color="#0000ff"><a name="N154">154</a></font> - Cf. Sap 9, 15.</p>
+<p><font color="#0000ff"><a name="N155">155</a></font> - 1 Io 1, 8.</p>
+<p><font color="#0000ff"><a name="N156">156</a></font> - Cf. Ps 50, 19.</p>
+<p><font color="#0000ff"><a name="N157">157</a></font> - Ps 37, 10.</p>
+<p><font color="#0000ff"><a name="N158">158</a></font> - Cf. 2 Cor 1, 22.</p>
+<p><font color="#0000ff"><a name="N159">159</a></font> - Eccli 40, 1.</p>
+<p><font color="#0000ff"><a name="N160">160</a></font> - 1 Cor. 11, 31.32.</p>
+<p><font color="#0000ff"><a name="N161">161</a></font> - Gal 5, 6.</p>
+<p><font color="#0000ff"><a name="N162">162</a></font> - Iac 2, 17.</p>
+<p><font color="#0000ff"><a name="N163">163</a></font> - Iac 2, 14.</p>
+<p><font color="#0000ff"><a name="N164">164</a></font> - 1 Cor 3, 15.</p>
+<p><font color="#0000ff"><a name="N165">165</a></font> - 1 Cor 6, 9-10.</p>
+<p><font color="#0000ff"><a name="N166">166</a></font> - Cf. 1 Cor 3, 11-12.</p>
+<p><font color="#0000ff"><a name="N167">167</a></font> - 1 Cor 3, 13-15.</p>
+<p><font color="#0000ff"><a name="N168">168</a></font> - Eccli 27, 6; cf. 2, 5.</p>
+<p><font color="#0000ff"><a name="N169">169</a></font> - Cf. 1 Cor 7, 32-33.</p>
+<p><font color="#0000ff"><a name="N170">170</a></font> - Cf. 1 Cor 6, 10.</p>
+<p><font color="#0000ff"><a name="N171">171</a></font> - Mt 25, 34.</p>
+<p><font color="#0000ff"><a name="N172">172</a></font> - Mt 25, 41.</p>
+<p><font color="#0000ff"><a name="N173">173</a></font> - Cf. Eccli 15, 21.</p>
+<p><font color="#0000ff"><a name="N174">174</a></font> - Mt 6, 9.</p>
+<p><font color="#0000ff"><a name="N175">175</a></font> - Cf. Io 3, 5.</p>
+<p><font color="#0000ff"><a name="N176">176</a></font> - Cf. Mt 6, 12.</p>
+<p><font color="#0000ff"><a name="N177">177</a></font> - Lc 11, 41.</p>
+<p><font color="#0000ff"><a name="N178">178</a></font> - Cf. Mt 5, 44-47; Rom 12, 17-21.</p>
+<p><font color="#0000ff"><a name="N179">179</a></font> - Mt 5, 44.</p>
+<p><font color="#0000ff"><a name="N180">180</a></font> - Mt 6, 12.</p>
+<p><font color="#0000ff"><a name="N181">181</a></font> - Io 14, 6.</p>
+<p><font color="#0000ff"><a name="N182">182</a></font> - Mt 6, 14-15.</p>
+<p><font color="#0000ff"><a name="N183">183</a></font> - Lc 11, 37-41.</p>
+<p><font color="#0000ff"><a name="N184">184</a></font> - Act 15, 9.</p>
+<p><font color="#0000ff"><a name="N185">185</a></font> - Tit 1, 15.</p>
+<p><font color="#0000ff"><a name="N186">186</a></font> - Eccli 30, 24.</p>
+<p><font color="#0000ff"><a name="N187">187</a></font> - Rom 5, 16.</p>
+<p><font color="#0000ff"><a name="N188">188</a></font> - Rom 5, 8.</p>
+<p><font color="#0000ff"><a name="N189">189</a></font> - Lc 10, 27.</p>
+<p><font color="#0000ff"><a name="N190">190</a></font> - Lc 11, 42.</p>
+<p><font color="#0000ff"><a name="N191">191</a></font> - Mt 23, 26.</p>
+<p><font color="#0000ff"><a name="N192">192</a></font> - Lc 11, 42.</p>
+<p><font color="#0000ff"><a name="N193">193</a></font> - Cf. Ps 10, 6.</p>
+<p><font color="#0000ff"><a name="N194">194</a></font> - Ps 58, 11.</p>
+<p><font color="#0000ff"><a name="N195">195</a></font> - 1 Cor 7, 5.</p>
+<p><font color="#0000ff"><a name="N196">196</a></font> - 1 Cor 7, 6.</p>
+<p><font color="#0000ff"><a name="N197">197</a></font> - 1 Cor 6, 1.</p>
+<p><font color="#0000ff"><a name="N198">198</a></font> - 1 Cor 6, 4-6.</p>
+<p><font color="#0000ff"><a name="N199">199</a></font> - 1 Cor 6, 7.</p>
+<p><font color="#0000ff"><a name="N200">200</a></font> - 1 Cor 6, 7.</p>
+<p><font color="#0000ff"><a name="N201">201</a></font> - Mt 5, 40.</p>
+<p><font color="#0000ff"><a name="N202">202</a></font> - Lc 6, 30.</p>
+<p><font color="#0000ff"><a name="N203">203</a></font> - Iac 3, 2.</p>
+<p><font color="#0000ff"><a name="N204">204</a></font> - Mt 6, 12.</p>
+<p><font color="#0000ff"><a name="N205">205</a></font> - Cf. Mt 5, 22.</p>
+<p><font color="#0000ff"><a name="N206">206</a></font> - Mt 5, 23.</p>
+<p><font color="#0000ff"><a name="N207">207</a></font> - Cf. Col 2, 22.</p>
+<p><font color="#0000ff"><a name="N208">208</a></font> - Gal 4, 11.</p>
+<p><font color="#0000ff"><a name="N209">209</a></font> - Ps 10, 3.</p>
+<p><font color="#0000ff"><a name="N210">210</a></font> - Isai 5, 7.</p>
+<p><font color="#0000ff"><a name="N211">211</a></font> - Gen 18, 20.</p>
+<p><font color="#0000ff"><a name="N212">212</a></font> - Gal 4, 11.</p>
+<p><font color="#0000ff"><a name="N213">213</a></font> - Mt 6, 12-13.</p>
+<p><font color="#0000ff"><a name="N214">214</a></font> - Ps 26, 1.</p>
+<p><font color="#0000ff"><a name="N215">215</a></font> - 2 Tim 2, 25.</p>
+<p><font color="#0000ff"><a name="N216">216</a></font> - Lc 22, 61.</p>
+<p><font color="#0000ff"><a name="N217">217</a></font> - Cf. Mt 12, 32.</p>
+<p><font color="#0000ff"><a name="N218">218</a></font> - Cf. Mt 22, 30.</p>
+<p><font color="#0000ff"><a name="N219">219</a></font> - Cf. 1 Cor 15, 44-46.</p>
+<p><font color="#0000ff"><a name="N220">220</a></font> - Cf. Sap 9, 15.</p>
+<p><font color="#0000ff"><a name="N221">221</a></font> - Cf. Gal 5, 17.</p>
+<p><font color="#0000ff"><a name="N222">222</a></font> - Cf. 1 Cor 15, 40.</p>
+<p><font color="#0000ff"><a name="N223">223</a></font> - 1 Cor 15, 50.</p>
+<p><font color="#0000ff"><a name="N224">224</a></font> - Cf. Lc 24, 39.</p>
+<p><font color="#0000ff"><a name="N225">225</a></font> - 1 Cor 15, 44.</p>
+<p><font color="#0000ff"><a name="N226">226</a></font> - Cf. 1 Tim 2, 5.</p>
+<p><font color="#0000ff"><a name="N227">227</a></font> - Cf. Mt 25, 41.</p>
+<p><font color="#0000ff"><a name="N228">228</a></font> - Cf. Apoc 2, 11; 20, 6.14.</p>
+<p><font color="#0000ff"><a name="N229">229</a></font> - Ps 100, 1.</p>
+<p><font color="#0000ff"><a name="N230">230</a></font> - Cf. Rom 9, 10 s.</p>
+<p><font color="#0000ff"><a name="N231">231</a></font> - Mt 11, 21.</p>
+<p><font color="#0000ff"><a name="N232">232</a></font> - Ps 113, 11.</p>
+<p><font color="#0000ff"><a name="N233">233</a></font> - 1 Tim 2, 4.</p>
+<p><font color="#0000ff"><a name="N234">234</a></font> - Mt 23, 37.</p>
+<p><font color="#0000ff"><a name="N235">235</a></font> - Rom 9, 18.</p>
+<p><font color="#0000ff"><a name="N236">236</a></font> - Rom 9, 11-13. Cf. Gen 25, 23.</p>
+<p><font color="#0000ff"><a name="N237">237</a></font> - Mal 1, 2-3.</p>
+<p><font color="#0000ff"><a name="N238">238</a></font> - Rom 9, 14.</p>
+<p><font color="#0000ff"><a name="N239">239</a></font> - Rom 9, 15. Cf. Ex 33, 19.</p>
+<p><font color="#0000ff"><a name="N240">240</a></font> - Rom 9, 16.</p>
+<p><font color="#0000ff"><a name="N241">241</a></font> - Cf. Eph 2, 3.</p>
+<p><font color="#0000ff"><a name="N242">242</a></font> - 1 Cor 1, 31.</p>
+<p><font color="#0000ff"><a name="N243">243</a></font> - Rom 9, 16.</p>
+<p><font color="#0000ff"><a name="N244">244</a></font> - Rom 9, 17. Cf. Ex 9, 11.</p>
+<p><font color="#0000ff"><a name="N245">245</a></font> - Rom 9, 18.</p>
+<p><font color="#0000ff"><a name="N246">246</a></font> - Rom 9, 19.</p>
+<p><font color="#0000ff"><a name="N247">247</a></font> - Rom 9, 20-21.</p>
+<p><font color="#0000ff"><a name="N248">248</a></font> - Rom 3, 19.</p>
+<p><font color="#0000ff"><a name="N249">249</a></font> - 1 Cor 1, 31.</p>
+<p><font color="#0000ff"><a name="N250">250</a></font> - Cf. Ps 110, 2.</p>
+<p><font color="#0000ff"><a name="N251">251</a></font> - Cf. Mt 16, 21-23.</p>
+<p><font color="#0000ff"><a name="N252">252</a></font> - Cf. At 21, 10-14.</p>
+<p><font color="#0000ff"><a name="N253">253</a></font> - 1 Tim 2, 4.</p>
+<p><font color="#0000ff"><a name="N254">254</a></font> - Io 1, 9.</p>
+<p><font color="#0000ff"><a name="N255">255</a></font> - Cf. Mt 11, 21.</p>
+<p><font color="#0000ff"><a name="N256">256</a></font> - 1 Tim 2, 1-2.</p>
+<p><font color="#0000ff"><a name="N257">257</a></font> - 1 Tim 2, 3.</p>
+<p><font color="#0000ff"><a name="N258">258</a></font> - 1 Tim 2, 4.</p>
+<p><font color="#0000ff"><a name="N259">259</a></font> - Lc 11, 42.</p>
+<p><font color="#0000ff"><a name="N260">260</a></font> - Cf. Ps 113, 11.</p>
+<p><font color="#0000ff"><a name="N261">261</a></font> - Cf. Prov 8, 35 (<i>sec. LXX</i>).</p>
+<p><font color="#0000ff"><a name="N262">262</a></font> - Rom 6, 23.</p>
+<p><font color="#0000ff"><a name="N263">263</a></font> - Cf. Rom 11, 6.</p>
+<p><font color="#0000ff"><a name="N264">264</a></font> - Cf. Io 1, 16.</p>
+<p><font color="#0000ff"><a name="N265">265</a></font> - Cf. Eccl 7, 30.</p>
+<p><font color="#0000ff"><a name="N266">266</a></font> - Cf. Rom 9, 20-21.</p>
+<p><font color="#0000ff"><a name="N267">267</a></font> - Cf. 1 Tim 2, 5.</p>
+<p><font color="#0000ff"><a name="N268">268</a></font> - 2 Cor 5, 10; cf. Rom 14, 10.</p>
+<p><font color="#0000ff"><a name="N269">269</a></font> - Cf. Ps 76, 10.</p>
+<p><font color="#0000ff"><a name="N270">270</a></font> - Cf. Rom 9, 23.</p>
+<p><font color="#0000ff"><a name="N271">271</a></font> - Mt 25, 46.</p>
+<p><font color="#0000ff"><a name="N272">272</a></font> - Cf Io. 3, 36.</p>
+<p><font color="#0000ff"><a name="N273">273</a></font> - Cf. Ps 30, 20.</p>
+<p><font color="#0000ff"><a name="N274">274</a></font> - Cf. 1 Cor 3, 1-2.</p>
+<p><font color="#0000ff"><a name="N275">275</a></font> - Ier 17, 5.</p>
+<p><font color="#0000ff"><a name="N276">276</a></font> - Cf. Mt 6, 9-13.</p>
+<p><font color="#0000ff"><a name="N277">277</a></font> - Mt 6, 9-10.</p>
+<p><font color="#0000ff"><a name="N278">278</a></font> - Mt 6, 11-13.</p>
+<p><font color="#0000ff"><a name="N279">279</a></font> - Cf. Lc 11, 2-4.</p>
+<p><font color="#0000ff"><a name="N280">280</a></font> - Mt 6, 13.</p>
+<p><font color="#0000ff"><a name="N281">281</a></font> - Cf. 1 Cor 13, 13.</p>
+<p><font color="#0000ff"><a name="N282">282</a></font> - Cf. Gal 5, 6.</p>
+<p><font color="#0000ff"><a name="N283">283</a></font> - Cf. Mt 7, 7.</p>
+<p><font color="#0000ff"><a name="N284">284</a></font> - Cf. Rom 5, 5.</p>
+<p><font color="#0000ff"><a name="N285">285</a></font> - Cf. Rom 7, 7.</p>
+<p><font color="#0000ff"><a name="N286">286</a></font> - Cf. 2 Pt 2, 19.</p>
+<p><font color="#0000ff"><a name="N287">287</a></font> - Rom 5, 20.</p>
+<p><font color="#0000ff"><a name="N288">288</a></font> - Cf. Gal 5, 17.</p>
+<p><font color="#0000ff"><a name="N289">289</a></font> - Cf. Rom 1, 17; Gal 3, 11; Hebr 10, 38.</p>
+<p><font color="#0000ff"><a name="N290">290</a></font> - Cf. Sap 11, 21.</p>
+<p><font color="#0000ff"><a name="N291">291</a></font> - Cf. Io 1, 17.</p>
+<p><font color="#0000ff"><a name="N292">292</a></font> - Io 3, 8.</p>
+<p><font color="#0000ff"><a name="N293">293</a></font> - Cf. Rom 14, 9.</p>
+<p><font color="#0000ff"><a name="N294">294</a></font> - 1 Tim 1, 5.</p>
+<p><font color="#0000ff"><a name="N295">295</a></font> - Cf. Rom 5, 5.</p>
+<p><font color="#0000ff"><a name="N296">296</a></font> - Cf. Mt 22, 40.</p>
+<p><font color="#0000ff"><a name="N297">297</a></font> - 1 Io 4, 8.</p>
+<p><font color="#0000ff"><a name="N298">298</a></font> - Mt 5, 27; Rom 13, 9.</p>
+<p><font color="#0000ff"><a name="N299">299</a></font> - 1 Cor 7, 1.</p>
+<p><font color="#0000ff"><a name="N300">300</a></font> - Cf. 1 Cor 4, 5.</p>
+<p><font color="#0000ff"><a name="N301">301</a></font> - Io 15, 13.</p>
+
+</body>
