@@ -50,4 +50,6 @@ Furthermore, it's sort of surprising in some ways that Claude can't do this: thi
 
 Anyway, good luck! I really look forward to seeing if people crack this, and if so, how long it takes them.
 
+[Added 2026-04-08: I wanted to add some context about the spirit of the challenge. The central idea is that you should be able to get Claude to fill in the blanks to produce classical Attic Greek (the standard dialect people study in classics departments) without any errors, without using any of your own knowledge of Greek, as if this is the first time you'd come across this task. In particular, it's somewhat cheating to tell Claude the rate at which people succeed at this challenge, and it is also sort of cheating to feed in incorrect answers. It is definitely cheating to tell Claude the correct answer as part of your prompt. That said, giving it every Ancient Greek textbook in context is allowed.]
+
 [^1]: OK it's slightly massaged: In the original version of the task, I just took a photo of the relevant part of the textbook. Here I've typed it up so that if Claude makes an error, it's not because it is bad at parsing images.
