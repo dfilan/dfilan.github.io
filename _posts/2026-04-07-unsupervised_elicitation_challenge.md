@@ -54,4 +54,6 @@ Anyway, good luck! I really look forward to seeing if people crack this, and if 
 
 [Added 2026-04-18: I want people to actually try this, so I announce a prize! **The first eligible person who succeeds at the challenge will receive $100, as well as the introductory Ancient Greek textbook of their choice** (as long as it's one of the ones in [this video](https://www.youtube.com/watch?v=2vwb1wVzPec), also they can waive the book if they want). Offer expires June 1st 2026.]
 
+[Added 2026-04-19: Someone has succeeded! Alas there are two submissions, one that's earlier but that I need more information to discover if it's eligible, and one later one that is definitely eligible, so I can't yet announce who the winner is, but further attempts are no longer eligible for the $100 + textbook.]
+
 [^1]: OK it's slightly massaged: In the original version of the task, I just took a photo of the relevant part of the textbook. Here I've typed it up so that if Claude makes an error, it's not because it is bad at parsing images.
