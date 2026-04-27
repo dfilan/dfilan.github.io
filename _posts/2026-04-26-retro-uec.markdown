@@ -1,0 +1,81 @@
+---
+layout: post
+title:  "Retrospective on my unsupervised elicitation challenge"
+date: 2026-04-26
+---
+
+_This post contains spoilers for the unsupervised elicitation challenge of getting Claude to get my Ancient Greek homework right._
+
+tl;dr Opus 4.7 one-shots it, nothing else worked.
+
+## The challenge
+
+A few weeks ago, I announced to the world my Unsupervised Elicitation Challenge ([my blog](https://danielfilan.com/2026/04/07/unsupervised_elicitation_challenge.html), [LessWrong](https://www.lesswrong.com/posts/ASoFTyk3bzBE62dyn/my-unsupervised-elicitation-challenge)). I'd encourage you to read that post for the context, but the tl;dr is that there was a fill-in-the-blank exercise early on in my Ancient Greek textbook that Claude Opus 4.6 didn't fill out correctly by default, but could do correctly if I prodded it a bit. The challenge was to get it to fill out the answers correctly without knowing any Ancient Greek yourself---after all, Opus 4.6 apparently has this knowledge somewhere internally (as you might expect, given that it's a large language model that has presumably read the whole corpus of Ancient Greek as well as many textbooks on the topic), but I was only able to extract it out because I knew what to ask about.
+
+The general idea of the challenge is to mimic a hard version of AI alignment, in some sense: suppose that there's some task you want an AI to complete, but can't check. Can you get the AI to complete that task, when it might not by default? I found this challenge especially interesting for a few reasons:
+  - It's a naturalistic task. This is a real problem that I actually wanted an AI to solve as part of my daily life, not a maximally adversarial test case.
+  - I'm unaware of other tasks where I could make a strong case that AIs don't get them right by default but "could".
+  - Unlike many benchmarks, where AI researchers can check their models' answers if they really want to, this is really unsupervised because (a) most AI researchers have not studied Ancient Greek and (b) the answers are not available online.
+
+As an addendum, after some time of nobody succeeding, I eventually offered a prize of $100 plus an Ancient Greek textbook for the first correct answer, which greatly increased the volume of attempts.
+
+## The secret: accents
+
+Here is specifically what Claude Opus 4.6 gets wrong: Ancient Greek words have accents, and those accents change in response to surrounding words. By default, Opus 4.6 will correctly modify some of the accents when filling in the blanks, but not all of them. This is all you really need to know, but in the rest of this section I will explain the accent rules further.
+
+Ancient Greek has three accents: acute, which looks like ί; grave, which looks like ὶ, and circumflex, which looks like ῖ. There are two rules for how these accents change that are relevant for this exercise (altho these won't totally cover all Ancient Greek accent rules, for further coverage I recommend [this YouTube channel](https://www.youtube.com/@AncientGreekforMereMorta-nu1bx)).
+
+Firstly, by default you can't have an acute accent on the final vowel of a word when it's followed by another word---instead, the accent becomes grave. So, the word for "Greek" (as an adjective) is Ἑλληνικός, the word for "word" is λόγος, but "Greek word" is Ἑλληνικὸς λόγος.
+
+Secondly, before the word ἐστιν (is) or εἰσιν (are), one of three things happens:
+1. If the preceding word has a circumflex on its final vowel, nothing happens. So, Ἡρακλῆς (Hercules) + ἐστιν (is) = Ἡρακλῆς ἐστιν (it is Hercules).
+2. If the preceding word can fit an acute on its final vowel, it gets an acute on that final vowel. When can a word fit an acute on its final vowel? When it already has an acute on its final vowel, or when the second-to-last vowel doesn't have an acute. So, νῆσος (island) + ἐστιν (is) = νῆσός ἐστιν (it is an island).
+3. If the preceding word can't fit an acute accent on its final vowel, ἐστιν or εἰσιν get an acute on their final iota. So, λόγος (word) + ἐστιν (is) = λόγος ἐστίν (it is a word).
+    1. But, if there's a word after ἐστίν, that acute turns into a grave, as per the first rule.
+
+You might ask: this sounds complicated, and this is only a subset of the rules of how accents work, so how do I know that Opus 4.6 knows these accent rules? One way I know is that if you prod it to get the accents right, it eventually does, but this is a bit finicky: you have to prod it multiple times, and know when to stop. I think my most convincing argument is that when I've translated the passage into English and gotten Opus 4.6 to translate it back into Ancient Greek, it gets all the accents right when doing so.[^1]
+
+## Is this unfair?
+
+One reaction to this challenge that at least one person had is that it's unfair to expect Claude to change the form of words in a fill-in-the-blanks exercise, and instead a natural understanding of the exercise is that you should just slot in the fitting words into the blanks, especially for something as fiddly as accents. There are two main reasons why I think this is indeed fair:
+1. Elsewhere in the book, you are expected to change the forms of the words in the fill-in-the-blanks exercises so that they fit in with their context, e.g. to change the case of a noun. I think this indicates that changing words to fill the blanks is not out of bounds.
+2. Opus 4.6 will change accents on some of the words. For example, in basically all attempts at this challenge, when inserting the word ἀλλά (but), Opus 4.6 will consistently turn the final acute into a grave. My guess is that this is because one never sees the word ἀλλά alone in real text, because it always leads into some following text, and so Opus 4.6 is very used to the form with the final grave accent.
+
+## Nobody succeeded
+
+I received a bit over 20 submissions to this challenge, in [the comments section of the original LessWrong post](https://www.lesswrong.com/posts/ASoFTyk3bzBE62dyn/my-unsupervised-elicitation-challenge), via replies to my tweets about it, and via private messages on various platforms. No submission that used Opus 4.6 was successful. From what I could tell, typical strategies involved either (a) getting Claude to double-check its work and look for mistakes, or (b) generating a large number of attempts, and asking Claude to pick the best one. Not only did none of these work (Opus 4.6 is somehow near-blind to naming accents as a thing to check, and never generates the correctly accented answers for some words), my impression is that they on average did worse than just putting the raw prompt into Opus 4.6 with extended thinking.[^2] I hypothesize that this is due to Opus 4.6 being in "English speaker learning Ancient Greek" mode, for whom these rules really are hard (as opposed to native Ancient Greek speakers, for whom they were presumably second nature), but I'm not sure how you'd prove or disprove that.
+
+Here are some strategies that nobody tried to my knowledge, that I think would have worked:
+- Have Claude fill in the blanks, translate the passage to English, translate it back again, and use that to fill in the blanks. Given that Claude gets accents right when just writing Ancient Greek from scratch, I think this would have had a decent chance at working, but it would have been hard to know a priori that this would work better than other approaches (and it's somewhat overfit to translation, rather than general elicitation tasks).
+- Have Claude teach you introductory Ancient Greek. It took me about a week to learn enough Ancient Greek to do this exercise, so presumably if you were dedicated enough this path would be possible (you might think it would count as cheating but [one LessWrong user explicitly asked about it](https://www.lesswrong.com/posts/ASoFTyk3bzBE62dyn/my-unsupervised-elicitation-challenge?commentId=HpXjZ5fkNMXkJGxfi) and I clarified that it was allowed). My guess is that this would have worked---you would probably have to prompt it with something like "please tell me what's covered in the first 5 chapters of a standard Ancient Greek text" or something (since if you asked it "what's relevant to this exercise" it might not think of accent rules)---but (a) I'm not confident it would and (b) I imagine it would take more time than most people were willing to spend.
+
+## What this says about alignment
+
+One interesting thing about this challenge for me is that despite being what I would consider an "alignment failure" (you are failing to get the model to do something that you want that it is capable of), it is also a "capabilities failure" and does not specifically involve Claude being a nasty scheming trickster or such. Instead, Opus 4.6's knowledge of Ancient Greek accentuation rules is somehow inaccessible to it when presented with this problem, and/or it doesn't 'want to' spend the required effort to get the right answer on this problem. To me, this helped expand my view of what alignment failures could look like, and why one might think that such issues will be solved by continuing capabilities progress.
+
+## The problem of Opus 4.7
+
+I announced my challenge on April 7th. Slightly over a week later, Anthropic released a successor model, [Opus 4.7](https://www.anthropic.com/news/claude-opus-4-7). I initially tried Opus 4.7 on the problem, and it got it wrong. I went away happily thinking that my challenge was still alive, but I was wrong: unbeknownst to me, I had not correctly turned on "adaptive thinking" (aka letting Claude use chain-of-thought when it thinks the task is hard), and with this setting, Opus 4.7 can just one-shot this homework problem.
+- Incidentally despite focussing on Opus 4.7, I have also seen a transcript of GPT-5.4 Pro with extended thinking one-shot the problem with a slightly re-formatted word list. That said, I won't focus on this because most participants focussed on Claude models.
+
+Why is this? I can only guess. Despite my attempts to goad Anthropic employees into attempting this task, I do not suspect that it is because 4.7 was explicitly trained to be better at Ancient Greek. Instead, my guess is that it is a combination of two effects: firstly, a changed tokenizer that uses more tokens for the same input text, possibly making accents more atomic and easier to reason about; and secondly, generally being smarter and finding more stuff easy. If I had an infinite budget for computation, I might wish to know which of these effects dominated, but alas there are more pressing problems in the world.[^3]
+
+At any rate, this posed a serious problem for my challenge in two ways:
+1. Most participants have easy access to Opus 4.7, and so it is no longer really unsupervised for them.
+2. More importantly, some participants incorrectly believed that Opus 4.7 was allowed in the challenge, as did I (I say "incorrectly" because the original post scoped it to Opus 4.6, and I wouldn't have said Opus 4.7 was allowed if I had realized it could one-shot it). As a result, some people posted correct answers to the public internet, and I then declared the challenge solved, making the challenge even less unsupervised.
+
+## Next steps for unsupervised elicitation
+
+Due to the above, I am officially retiring the challenge, at least in its current form. That said, I am refraining from naming the textbook and actually pasting in all the answers, to keep the challenge from being totally trivial (as well as to make it somewhat harder for students to cheat on their Ancient Greek homework). Similarly, I will no longer grade attempts on the original post, and will delete comments here that give the full answers. I will give a $50 prize to the person who first solved it using Opus 4.7, since despite it not being technically allowed, they did me the valuable service of showing me that Opus 4.7 could solve it.[^4]
+
+I continue to be interested in one-shot unsupervised elicitation challenges, especially in contexts where there's some hard-to-foresee trick. My assumption is that it is possible to come up with this sort of thing in other languages (or even in Ancient Greek), and would be excited about people doing so.
+
+I also imagine that it might be possible to create a held-out 'test exercise' that similarly tests accentuation rules (among other things), and ask people to come up with some sort of scaffold or prompt that generalizes to the held-out 'test exercise' on Opus 4.6 without cheating (e.g. pasting these rules of Ancient Greek accentuation into the prompt). That said, (a) it seems like work to hold this in private and run people's scaffolds on it, and (b) there will probably be a lot of annoying judgement calls in terms of what counts as cheating. I think I am not up for taking this on, but would cheer on someone else who did.
+
+[^1]: However, it does get other things wrong related to diacritics, that are the equivalent of knowing the difference between "a" and "an". Ancient Greek speakers: specifically, it doesn't turn οὐκ into οὐχ before a rough breathing mark.
+
+[^2]: Partial credit to LessWrong user [the gears to ascension](https://www.lesswrong.com/users/the-gears-to-ascension), who (after being told the correct answer after a failed attempt) managed to get a non-cheating-seeming run with Claude Opus 4.6 where it eventually got the right answer, using strategies like (a) emphasizing how many tokens it is able to use to stop it from stopping early and (b) emphasizing that the grader is "arbitrarily adversarial" and "maximally strict" (a characterization of myself that I would dispute).
+
+[^3]: Interestingly, it also does a better job at noticing when I have wrong vowel length marks in my attempts to translate English text into Latin, something Opus 4.6 and previous models would never pick up on, suggesting that there is some general factor of "being good at ancient language diacritics" that has been improved upon---plausibly a tokenization improvement. I would be interested to know whether there are similar improvements in other languages which do not have large amounts text on the internet and use diacritics over Latin characters.
+
+[^4]: I'll bump this to the full $100 prize if I indeed said somewhere on the public internet that Opus 4.7 was allowed (I can't find me doing that, but I haven't looked that hard).
