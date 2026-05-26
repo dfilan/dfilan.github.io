@@ -6,6 +6,8 @@ date: 2026-05-26
 
 [Magnifica Humanitas](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html) is a recent '[encyclical](https://en.wikipedia.org/wiki/Encyclical#Catholic_usage)' by Pope Leo XIV, leader of the Catholic Church. It outlines a vision for how humanity should interact with artificial intelligence, emphasizing the importance of human dignity and ensuring that AI does not replace human relationships, among other topics. Interestingly, many portions appear to be written by AI.
 
+[EDIT: since I put up my post, Linch Zhang has posted [a more comprehensive analysis](https://linch.substack.com/p/claude-author-of-the-humanitas) with the same conclusion, that I would recommend readers also look at.]
+
 ## Why I thought to check this
 
 Friends of mine [Linch Zhang](https://x.com/LinchZhang/status/2058848126342250977) and [the Axolotl](https://x.com/calxolotl/status/2058857550356083085) noticed that parts of the English text appear to be AI-generated, and twitter user [kartr](https://x.com/0xkartr/status/2059006110598676785) found that the Italian text had the largest fraction of AI-generated content out of all the translations published by the Vatican, speculating that it was the original copy, and translations by humans appear less 'AI-generated' to various tools.
