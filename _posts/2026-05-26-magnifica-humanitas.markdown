@@ -56,7 +56,7 @@ IMO, you should feel confident that paragraphs flagged as AI-written are, and su
 
 ### Studies indicate Pangram works pretty well
 
-To my knowledge, when Pangram has been studied in the academic literature, it has held up pretty well. [Jabarian and Imas](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5407424) indicate that it achieves a false positive rate of approximately 0, while having a true negative rate of under 5%. Perhaps more relevantly, [Puccetti, Pedrotti, and Esuli](https://ceur-ws.org/Vol-4195/59.pdf) tested a variety of methods on detecting AI-written Italian text. They found that Pangram performed quite well, achieving a literally 0% false positive rate and a true negative rate of around 28%.
+To my knowledge, when Pangram has been studied in the academic literature, it has held up pretty well. [Jabarian and Imas](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5407424) indicate that it achieves a false positive rate of approximately 0, while having a true negative rate of under 5%. Perhaps more relevantly, [Puccetti, Pedrotti, and Esuli](https://ceur-ws.org/Vol-4195/59.pdf) tested a variety of methods on detecting AI-written Italian text. They found that Pangram performed quite well, achieving a literally 0% false positive rate and a true negative rate of around 28%. (Thank you [Max Spero](https://x.com/max_spero_/status/2059130453496660247), who works at Pangram Labs, for bringing this latter paper to my attention)
 
 ### When I play around with Pangram, it works pretty well
 
